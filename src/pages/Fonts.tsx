@@ -126,7 +126,7 @@ export default function FontsPage({ onSelectFont, onNavigate }: FontsPageProps) 
         <div className="mb-16 sm:mb-20 max-w-4xl">
           <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10" style={{ background: "var(--brand)" }} />
-            <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--brand)" }}>Studio Archives</span>
+            <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--text-accent)" }}>Studio Archives</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, scale: 0.97 }}
@@ -190,7 +190,7 @@ export default function FontsPage({ onSelectFont, onNavigate }: FontsPageProps) 
               <div className="flex justify-between items-start mb-10 sm:mb-14 relative z-10">
                 <div className="flex flex-col gap-2">
                   <h3
-                    className={`font-black tracking-tighter font-headline ${font.isReal ? "group-hover:text-[#3AB549]" : ""} transition-colors`}
+                    className={`font-black tracking-tighter font-headline ${font.isReal ? "group-hover:text-[var(--text-accent)]" : ""} transition-colors`}
                     style={{ fontSize: "clamp(1.4rem,4vw,2.2rem)", color: "var(--text-primary)", lineHeight: 1 }}
                   >
                     {font.name}

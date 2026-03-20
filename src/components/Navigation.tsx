@@ -204,7 +204,7 @@ const Navigation = ({ isDark, toggleDark }: NavProps) => {
                       transition={{ delay: i * 0.08 }}
                       onClick={() => handleNavigate(item.path)}
                       className="text-5xl font-black tracking-tighter text-left font-headline transition-all"
-                      style={{ color: isActive ? "var(--brand)" : "var(--text-faint)" }}
+                      style={{ color: isActive ? "var(--text-accent)" : "var(--text-faint)" }}
                     >
                       {item.name}
                     </motion.button>

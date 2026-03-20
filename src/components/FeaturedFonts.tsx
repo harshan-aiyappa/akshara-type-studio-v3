@@ -38,7 +38,7 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
               className="flex items-center gap-4 mb-5"
             >
               <div className="h-[2px] w-10" style={{ background: "var(--brand)" }} />
-              <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--brand)" }}>
+              <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--text-accent)" }}>
                 The Collection
               </span>
             </motion.div>
@@ -113,7 +113,7 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
                         className="pill-badge w-max"
                         style={{
                           background: cfg.accent || cfg.dark ? "rgba(255,255,255,0.15)" : "var(--bg)",
-                          color: cfg.accent ? "#fff" : cfg.dark ? "var(--brand)" : "var(--brand)",
+                          color: cfg.accent ? "#fff" : cfg.dark ? "var(--brand)" : "var(--text-accent)",
                           border: `1px solid ${cfg.accent || cfg.dark ? "rgba(255,255,255,0.2)" : "var(--border)"}`,
                         }}
                       >
@@ -174,7 +174,7 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
                     </span>
                     <span
                       className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest font-headline group-hover:underline underline-offset-4"
-                      style={{ color: cfg.accent ? "#fff" : cfg.dark ? "#3AB549" : "var(--brand)" }}
+                      style={{ color: cfg.accent ? "#fff" : cfg.dark ? "#3AB549" : "var(--text-accent)" }}
                     >
                       Explore →
                     </span>

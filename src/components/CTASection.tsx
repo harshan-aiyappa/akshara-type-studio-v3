@@ -25,7 +25,7 @@ export default function CTASection({ onNavigate }: CTAProps) {
             <div className="flex justify-center mb-6 sm:mb-8">
               <span
                 className="pill-badge"
-                style={{ background: "var(--bg)", color: "var(--brand)" }}
+                style={{ background: "var(--bg)", color: "var(--text-accent)" }}
               >
                 Commission Your Script
               </span>

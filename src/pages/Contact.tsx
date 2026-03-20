@@ -39,7 +39,7 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-[var(--brand)] block mb-2 font-headline">Studio Location</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-accent)] block mb-2 font-headline">Studio Location</span>
                       <p className="text-xl font-bold font-headline" style={{ color: "var(--text-primary)" }}>Tirumakudalu Narasipura</p>
                       <p className="text-sm font-body mt-1 leading-relaxed" style={{ color: "var(--text-muted)" }}>Near Court Compound, Nanjangud Road,<br />opp. to APMC, Mysuru Dist., Karnataka 571124.</p>
                     </div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-[var(--brand)] block mb-2 font-headline">Call or Message</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-accent)] block mb-2 font-headline">Call or Message</span>
                       <a
                         href="tel:+919945382898"
                         className="text-xl font-bold font-headline transition-colors"
@@ -66,7 +66,7 @@ export default function ContactPage() {
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-[var(--brand)] block mb-2 font-headline">Electronic Mail</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-accent)] block mb-2 font-headline">Electronic Mail</span>
                       <a
                         href="mailto:connect.ats@outlook.com"
                         className="text-xl font-bold font-headline transition-colors"

@@ -83,7 +83,7 @@ function TransliterationTool() {
 
       <div className="relative z-10">
         <span className="inline-flex px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase mb-4 italic font-headline"
-          style={{ background: "rgba(58,181,73,0.2)", color: "#3AB549" }}>
+          style={{ background: "rgba(58,181,73,0.2)", color: "var(--text-accent)" }}>
           Most Popular
         </span>
         <h3 className="text-3xl md:text-4xl font-bold tracking-tighter font-headline mb-3">
@@ -231,7 +231,7 @@ function SpeechToTextTool() {
       )}
 
       {status === "listening" && (
-        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest font-headline" style={{ color: "#3AB549" }}>
+        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest font-headline" style={{ color: "var(--text-accent)" }}>
           <span className="w-2 h-2 rounded-full bg-[#3AB549] animate-pulse" />
           Listening for Kannada speech…
         </div>
@@ -445,7 +445,7 @@ export default function ToolsPage() {
         <div className="mb-12 sm:mb-16 md:mb-20 max-w-4xl">
           <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10" style={{ background: "var(--brand)" }} />
-            <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--brand)" }}>
+            <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--text-accent)" }}>
               Type Lab · Free Tools
             </span>
           </motion.div>
@@ -479,7 +479,7 @@ export default function ToolsPage() {
         <div className="mt-16 rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-12"
           style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
           <div className="flex-1">
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-3 font-headline" style={{ color: "var(--brand)" }}>
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-3 font-headline" style={{ color: "var(--text-accent)" }}>
               Tip
             </p>
             <p className="text-sm font-light font-body leading-relaxed" style={{ color: "var(--text-muted)" }}>

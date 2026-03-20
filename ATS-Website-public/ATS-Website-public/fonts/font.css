@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+
+/* Font List*/
+
+.card-sq, .card-sq .card-header, .card-sq .card-footer{
+	border-radius:0;
+	border: 1px solid rgba(231, 252, 228, 0.25);
+	background-color: #0A382F;
+	
+	}
+
+.card-LED{
+	border-radius:0;
+	border: 1px solid rgba(231, 252, 228, 0.25);
+	background-color: #040506;
+	
+	}
+
+.card-white{
+	border-radius:0;
+	border: 1px solid rgba(231, 252, 228, 0.25);
+	background-color: #fbfcfc;
+	color:#0A382F;
+
+	}
+
+
+.font-list{
+	font-size:119px;
+	text-align:center!important;
+}
+
+
+
+
+@font-face{
+font-family:ATS-Bandipura-Bold;
+Font-weight:normal;
+font-style: bold;
+
+src:url(bandipura/woff2/ATSBandipura-Bold.woff2) format('woff2')}
+
+.bandipura{font-family:ATS-Bandipura-Bold;
+Font-weight:normal;
+font-style: bold;
+line-height: 130%;
+}
+
+
+
+/*bengaluru*/
+/*Dot*/
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:100;
+font-style: DotRegular;
+src:url(woff2/ATSBengaluru-DotRegular.woff2) format('woff2')}
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:150;
+font-style: DotBold;
+src:url(woff2/ATSBengaluru-DotBold.woff2) format('woff2')}
+
+
+/*Pixel*/
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:200;
+font-style: PixelRegular;
+src:url(woff2/ATSBengaluru-PixelRegular.woff2) format('woff2')}
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:250;
+font-style: PixelBold;
+src:url(woff2/ATSBengaluru-PixelBold.woff2) format('woff2')}
+
+
+/*Smooth*/
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:300;
+font-style: SmoothRegular;
+src:url(woff2/ATSBengaluru-SmoothRegular.woff2) format('woff2')}
+
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:350;
+font-style: SmoothBold;
+src:url(woff2/ATSBengaluru-SmoothBold.woff2) format('woff2')}
+
+
+
+/*Square*/
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:400;
+font-style: SquareRegular;
+src:url(bengaluru/woff2/ATSBengaluru-SquareRegular.woff2) format('woff2')}
+
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:450;
+font-style: SquareBold;
+src:url(bengaluru/woff2/ATSBengaluru-SquareBold.woff2) format('woff2')}
+
+
+
+.bengaluru {font-family:ATSBengaluru;
+Font-weight:450;
+font-style: SquareBold;
+line-height: 130%;	
+
+}
+
+
+
+/*LED*/
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:500;
+font-style: LEDRegular;
+font-display: swap;
+src:url(bengaluru/woff2/ATSBengaluru-LEDRegular.woff2) format('woff2')}
+
+
+@font-face{
+font-family:ATSBengaluru;
+Font-weight:550;
+font-style: LEDBold;
+font-display: swap;
+
+src:url(bengaluru/woff2/ATSBengaluru-LEDBold.woff2) format('woff2')}
+
+
+
+.LED {font-family:ATSBengaluru;
+	Font-weight:550;
+    font-style: LEDBold;
+	color: #ff5c00;
+	line-height: 130%;
+}
+
+
+
+/*Chikkamagalur*/
+
+@font-face{
+font-family:ATS-Chikkamagaluru;
+Font-weight:normal;
+src:url("chikkamagaluru/woff2/ATSChikkamagaluru-ColorRegular.woff2") format('woff2')}
+
+.chikkamagaluru{font-family:ATS-Chikkamagaluru;
+Font-weight:normal;
+font-style: ColorRegular;
+line-height: 130%;
+
+}
+
+

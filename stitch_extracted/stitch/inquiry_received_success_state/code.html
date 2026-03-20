@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#00531c",
+              "surface-container-highest": "#dee3e3",
+              "primary-container": "#21863a",
+              "on-error-container": "#93000a",
+              "background": "#f5faf9",
+              "surface-container-high": "#e4e9e8",
+              "primary-fixed": "#96f89e",
+              "tertiary-container": "#527d73",
+              "surface-dim": "#d6dbda",
+              "secondary-fixed": "#83fc86",
+              "on-surface-variant": "#3f4a3e",
+              "on-secondary-fixed": "#002204",
+              "outline-variant": "#becaba",
+              "inverse-primary": "#7adb84",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "surface-bright": "#f5faf9",
+              "outline": "#6f7a6d",
+              "on-secondary-fixed-variant": "#005315",
+              "on-primary-fixed": "#002107",
+              "surface-variant": "#dee3e3",
+              "surface-container-lowest": "#ffffff",
+              "primary": "#006b27",
+              "on-tertiary-fixed": "#00201b",
+              "on-tertiary": "#ffffff",
+              "surface": "#f5faf9",
+              "secondary": "#006e1e",
+              "on-secondary-container": "#007320",
+              "on-background": "#171d1c",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#bfece0",
+              "secondary-container": "#80f983",
+              "tertiary-fixed-dim": "#a3d0c4",
+              "primary-fixed-dim": "#7adb84",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#244e45",
+              "secondary-fixed-dim": "#66df6d",
+              "surface-tint": "#006e28",
+              "inverse-surface": "#2c3131",
+              "on-tertiary-container": "#f4fffa",
+              "surface-container": "#eaefee",
+              "on-surface": "#171d1c",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f0f5f4",
+              "on-primary-container": "#f7fff2",
+              "tertiary": "#3a645a",
+              "inverse-on-surface": "#edf2f1"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #f5faf9 0%, #e4e9e8 100%);
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(190, 202, 186, 0.2);
+        }
+        .organic-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(at 0% 0%, rgba(58, 181, 73, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(0, 107, 39, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(58, 181, 73, 0.08) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(0, 107, 39, 0.05) 0px, transparent 50%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center p-6 md:p-12 overflow-x-hidden">
+<div class="organic-mesh"></div>
+<main class="w-full max-w-2xl relative">
+<div class="absolute -top-24 -left-12 opacity-10 pointer-events-none">
+<h2 class="text-[12rem] font-bold text-primary leading-none tracking-tighter">ಧನ್ಯವಾದ</h2>
+</div>
+<div class="glass-card rounded-xl p-8 md:p-16 shadow-2xl shadow-primary/5 relative z-10 border-t border-l border-white/40">
+<div class="flex flex-col items-center text-center space-y-8">
+<div class="relative">
+<div class="w-24 h-24 rounded-full bg-primary-fixed/30 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-4xl" data-weight="fill">check</span>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<h1 class="text-4xl md:text-5xl font-black text-on-surface tracking-tighter">Inquiry Received</h1>
+<p class="text-on-surface-variant text-lg max-w-md mx-auto leading-relaxed font-light">
+                        Thank you for reaching out to Verdant Akshara. We have received your request and will review the details shortly.
+                    </p>
+</div>
+<div class="w-full max-w-sm space-y-4 pt-8 border-t border-outline-variant/20">
+<div class="flex justify-between items-center text-sm">
+<span class="text-tertiary font-medium tracking-wide">REQUEST STATUS</span>
+<span class="bg-primary-fixed-dim/20 text-on-primary-fixed-variant px-3 py-1 rounded-full text-xs font-semibold">Processing</span>
+</div>
+<div class="bg-surface-container-low/50 rounded-xl p-6 space-y-4 text-left">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-outline mb-1">Requester Name</p>
+<p class="text-on-surface font-semibold text-lg">Vikas Hegde</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-outline mb-1">Inquiry Type</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">edit_square</span>
+<p class="text-on-surface font-medium">Custom Typeface Design</p>
+</div>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-outline mb-1">Reference ID</p>
+<p class="text-on-surface-variant font-mono text-sm">VA-2024-8921</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col w-full max-w-sm gap-4 pt-4">
+<a class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-center" href="#">
+                        Return to Archive
+                    </a>
+<a class="text-on-surface-variant hover:text-primary text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-base transition-transform group-hover:-translate-x-1">arrow_back</span>
+                        Back to Home
+                    </a>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-16 -right-12 opacity-5 pointer-events-none">
+<h2 class="text-[10rem] font-bold text-primary leading-none tracking-tighter">ಅಕ್ಷರ</h2>
+</div>
+</main>
+<footer class="mt-auto pt-12 pb-8 w-full">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-4">
+<span class="text-primary font-black tracking-tighter text-xl">Verdant Akshara</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full hidden md:block"></span>
+<p class="text-on-surface-variant text-xs font-light tracking-wide">© 2024 Verdant Akshara Typography. All rights reserved.</p>
+</div>
+<nav class="flex gap-8">
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors" href="#">Licensing</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors" href="#">Process</a>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

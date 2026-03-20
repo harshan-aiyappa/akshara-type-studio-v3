@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Noto+Sans+Kannada:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#21863a",
+              "primary-fixed-dim": "#7adb84",
+              "surface-container-high": "#e4e9e8",
+              "outline-variant": "#becaba",
+              "inverse-primary": "#7adb84",
+              "on-primary-fixed": "#002107",
+              "surface-container-low": "#f0f5f4",
+              "surface-tint": "#006e28",
+              "on-background": "#171d1c",
+              "on-tertiary-container": "#f4fffa",
+              "surface-dim": "#d6dbda",
+              "primary": "#006b27",
+              "tertiary": "#3a645a",
+              "on-secondary-container": "#007320",
+              "background": "#f5faf9",
+              "on-primary-fixed-variant": "#00531c",
+              "error": "#ba1a1a",
+              "tertiary-fixed-dim": "#a3d0c4",
+              "surface-container": "#eaefee",
+              "secondary-fixed-dim": "#66df6d",
+              "tertiary-container": "#527d73",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#3f4a3e",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#80f983",
+              "tertiary-fixed": "#bfece0",
+              "surface-container-highest": "#dee3e3",
+              "on-tertiary-fixed-variant": "#244e45",
+              "on-tertiary-fixed": "#00201b",
+              "secondary-fixed": "#83fc86",
+              "surface": "#f5faf9",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#006e1e",
+              "on-surface": "#171d1c",
+              "surface-bright": "#f5faf9",
+              "on-primary-container": "#f7fff2",
+              "on-error": "#ffffff",
+              "outline": "#6f7a6d",
+              "on-secondary-fixed": "#002204",
+              "inverse-on-surface": "#edf2f1",
+              "surface-variant": "#dee3e3",
+              "on-error-container": "#93000a",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#2c3131",
+              "on-secondary-fixed-variant": "#005315",
+              "primary-fixed": "#96f89e"
+            },
+            fontFamily: {
+              "headline": ["Inter", "Noto Sans Kannada"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .ghost-border {
+        border: 1px solid rgba(190, 202, 186, 0.2);
+      }
+      .kannada-accent {
+        font-family: 'Noto Sans Kannada', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-emerald-50/80 dark:bg-emerald-950/80 backdrop-blur-xl shadow-sm dark:shadow-emerald-900/20">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter">Verdant Akshara</div>
+<div class="hidden md:flex gap-8 items-center font-inter text-sm tracking-tight font-medium">
+<a class="text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Type Lab</a>
+<a class="text-emerald-700 dark:text-emerald-400 font-bold border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="#">The Journal</a>
+<a class="text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Studio</a>
+<a class="text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Archive</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 hover:opacity-80 transition-opacity">search</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-medium shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform duration-200">Contact</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Featured Article Hero -->
+<section class="relative h-[870px] w-full px-8 flex items-end pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Calligraphic strokes of Kannada script" class="w-full h-full object-cover" data-alt="Abstract macro shot of ink flowing into paper fibers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbHOswMzbI_qq1a0xPMre4bbbmiZnMZ2ijkf868HeNrilBya7y-orEMNs6LyqI3_ZBW7xm0Dx-1iX0fx5DAbCM4C2hSoeY-cqFYqDQNf4hsEvLWogOn92r3xvKthTpOmVOMS9YFxBXJKiFFDorCXCejr_0k7bmYm89l_esVrBSdrQFLMfwrsHDPuvYb_R-5wC1LuoZg8lqACFq4ya0xdwy6KB1c6j26g6SuKX4A4Y12FjgzJ8B73Kf-jDYlNmuaaCzBrHOVsZCJ2M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-5xl">
+<span class="inline-block px-4 py-1 rounded-full bg-primary-fixed-dim text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6">Featured</span>
+<h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-8">
+                    Modernizing the <span class="kannada-accent font-normal text-primary-fixed opacity-90">ಹಳಗನ್ನಡ</span> Spirit: A Journey through Variable Axes.
+                </h1>
+<div class="flex items-center gap-6 text-emerald-50/80">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-sm font-medium">May 24, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="text-sm font-medium">Anvitha Hegde</span>
+</div>
+<button class="flex items-center gap-2 text-white font-semibold group">
+                        Read Feature
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</div>
+<!-- Decorative Large Glyph Background -->
+<div class="absolute -right-20 -bottom-20 opacity-10 select-none">
+<span class="text-[40rem] leading-none text-white kannada-accent">ಅ</span>
+</div>
+</section>
+<!-- Categories and Filter -->
+<section class="py-12 px-8 max-w-[1920px] mx-auto border-b border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-medium text-sm">All Stories</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors font-medium text-sm">Heritage</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors font-medium text-sm">Variable Type</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors font-medium text-sm">Studio News</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors font-medium text-sm">Interviews</button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="text-sm font-medium">Sort by:</span>
+<button class="flex items-center gap-1 text-sm font-bold text-primary">
+                        Latest
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Recent Posts Grid -->
+<section class="py-20 px-8 max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-emerald-900/5 transition-all duration-500">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Traditional stone carvings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Intricate stone carvings of ancient Kannada inscriptions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7414NkgyXwZDVaIE1SpuMWrTMoyyZRFmBgzU4jV4VGAGKTL287dEeWxBiHnmu0UmEtUbjdcGfifchV6Txm8aHT2FAAfZCpZIFlVvewYckkFDtcF7I8Doj4NpX531-rRGvQJJJ9pDzILXRhdhZdYGyGAcksvsgljf-laRKNboqROCpooubuj0i7Z6LvPZ7rUuzDgHdQfGyDLx8C0alKaxje0oYBuca8e8WIiGgob07yOEoGxc12FqmUUwAxgEL1Y_ZFoEmwFJrHaI"/>
+</div>
+<div class="p-8 flex flex-col h-full">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-tertiary">Heritage</span>
+<span class="text-xs text-on-surface-variant/60 font-medium">May 18, 2024</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Tracing the Curves: The Evolution of Halegannada Script.</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-8 line-clamp-3">Discover the mathematical precision and organic beauty of 12th-century inscriptions and how they influence modern digital type design at Verdant Akshara.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Author" data-alt="Portrait of a smiling designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMwmN_NzyYCe5CFuM63_WBg_vrCInKW__GTb2SnWC3bxyJDV4Qf3eNjyuiY0IZEolZarYedi9Z-Z3nd35_selbWtiQTLwa5HuVNjq3Tt5oPMQwofj7pYs2ojEFydvDq5gn_vLI0JUqQcy5_kRgpTaBSz5dCvd1CKKxWC-CtMqZpfVeQD1SFwu-ENhJkaGbRQBc5tJwkp9n3k3TxlOQF5wqssASjhfr7T3iBzpOKKqpCPX5vHvALCdhmM3xuUwLRdJfzc0KsHW3Jpc"/>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant">Rajesh M.</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Card 2 (Glassmorphic Variation) -->
+<article class="group relative flex flex-col glass-card ghost-border rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+<div class="aspect-[16/10] overflow-hidden relative">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+<img alt="Close up of type specimen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Extreme close up of a sharp metallic typeface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD74mGp8nZAVPqHmtugg3L3fwtll4XfcOm18ujHodi_ayorEdraYjM6TaVxVkvP5RlRu2lJ6eAVhajfV_7aVR6tPT5gB61XF6jefFhKhWqEVZgwI_63F1gkECN7tk839Ol001UxwSE-xu_H8a_x65ze9rVz9CKSE9kSmb9j9AKJIiA3yBj6pSrxfJkxYEKiCVi8ZLUTVVMs4AeQcMXPwU9XIFPAF-H4etWBli5216gNDCC_z42euoRviZK-1lcbtoo1IailEl2mPNI"/>
+</div>
+<div class="p-8 flex flex-col h-full">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Variable Type</span>
+<span class="text-xs text-on-surface-variant/60 font-medium">May 12, 2024</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Beyond Weight: Exploring Optical Size in Kannada Type.</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-8 line-clamp-3">How optical sizing ensures legibility from micro-captions to massive billboard displays without losing the calligraphic soul.</p>
+<div class="mt-auto pt-6 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Author" data-alt="Portrait of a female typographer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByMWZCq74kyqBaePTTTnvyf8XRjqJ0mdH1tXoGFDEXjGxmIj2Tl3Se6cMJslzx8OUaGxvTOlceR-Ze86ST9ifQiSIPmSWYK_Mynl7kROuoUutoeYhT8d9fuKhllP2i9c__oUXnR2VUvfcMvt5tE5Fn40K6zqF3hjtSy_ba-106g8-ckQBE8Sz7j_ngCCkNbI0q57FguT7OCAp3iCnR3rNip69hcfktESPLo0Tg4NiKW0Z2YiLtaQFAwRgu0xF9mVTR0uDI9Mhlro8"/>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant">Lata S.</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-emerald-900/5 transition-all duration-500">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Modern office setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Clean desk with a monitor showing typography sketches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBm2zrL1PlvJDG5g6trG6Qc1Q9wgxzFY1D3_sL56EGgpaR38enWIIOrxKJT8X85sijFDIxJUYjQK73kJyoMTKlX64nPvmIwhplQUthqg1ACIMaA5hkFHG2T3JXnBkDC-g4GrzRXHHRWiC2gaTG6YAp-vp8xHaqEmc7-fYKm2_hILGYnhP549RlxfuhqIFTTITr9hTzBeVmuhGYNfjRqJ2K1HJ3TCQtU6Zuuj8pCV8H-EmgmL62BXxwe-bd_8W8kxDU46mP_paYk2k"/>
+</div>
+<div class="p-8 flex flex-col h-full">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-tertiary">Studio News</span>
+<span class="text-xs text-on-surface-variant/60 font-medium">May 05, 2024</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Designing for the Next Billion Kannada Users.</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-8 line-clamp-3">Verdant Akshara partners with global tech giants to bring premium typography to the forefront of rural digital inclusion.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="text-[10px] font-bold">VA</span>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant">Studio Team</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- More grid items could go here... -->
+</div>
+<div class="mt-24 flex justify-center">
+<button class="px-10 py-4 border border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    Load More Stories
+                </button>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="mx-8 mb-32 relative py-24 px-8 md:px-24 rounded-[3rem] overflow-hidden bg-primary-container">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white rounded-full blur-[120px] -mr-64 -mt-64"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary-fixed-dim rounded-full blur-[100px] -ml-48 -mb-48"></div>
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">Stay attuned to the <span class="kannada-accent font-normal text-secondary-fixed opacity-90">ಕಲೆ</span> (art) of type.</h2>
+<p class="text-emerald-100/80 text-lg leading-relaxed max-w-md">Join our monthly newsletter for exclusive type specimens, studio insights, and Kannada typography trends.</p>
+</div>
+<form class="w-full flex flex-col md:flex-row gap-4">
+<input class="flex-grow px-8 py-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder:text-emerald-200/50 focus:outline-none focus:ring-2 focus:ring-secondary-fixed/50" placeholder="email@studio.com" type="email"/>
+<button class="bg-white text-primary px-10 py-5 rounded-2xl font-bold hover:bg-emerald-50 transition-colors shadow-xl">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-950 text-emerald-50 w-full relative py-12 flex flex-col md:flex-row justify-between items-center px-12 border-t border-emerald-800/30 font-inter text-xs tracking-normal">
+<div class="flex flex-col md:flex-row items-center gap-12 w-full max-w-[1920px] mx-auto justify-between">
+<div class="flex flex-col gap-2">
+<div class="text-xl font-bold text-emerald-100">Verdant Akshara</div>
+<p class="text-emerald-100/50">© 2024 Verdant Akshara. Crafted in Karnataka.</p>
+</div>
+<div class="flex gap-8 items-center">
+<a class="text-emerald-100/50 hover:text-emerald-100 transition-colors hover:underline decoration-emerald-500 underline-offset-4" href="#">Privacy</a>
+<a class="text-emerald-100/50 hover:text-emerald-100 transition-colors hover:underline decoration-emerald-500 underline-offset-4" href="#">Terms</a>
+<a class="text-emerald-100/50 hover:text-emerald-100 transition-colors hover:underline decoration-emerald-500 underline-offset-4" href="#">Careers</a>
+<a class="text-emerald-100/50 hover:text-emerald-100 transition-colors hover:underline decoration-emerald-500 underline-offset-4" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+</body></html>

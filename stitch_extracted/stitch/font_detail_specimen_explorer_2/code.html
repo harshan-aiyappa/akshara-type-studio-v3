@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Noto+Sans+Kannada:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#becaba",
+              "error-container": "#ffdad6",
+              "surface-variant": "#dee3e3",
+              "surface-dim": "#d6dbda",
+              "tertiary-container": "#527d73",
+              "on-tertiary-fixed-variant": "#244e45",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#66df6d",
+              "inverse-primary": "#7adb84",
+              "on-error": "#ffffff",
+              "secondary-container": "#80f983",
+              "surface-container-high": "#e4e9e8",
+              "on-tertiary": "#ffffff",
+              "primary": "#006b27",
+              "on-secondary-fixed": "#002204",
+              "on-tertiary-container": "#f4fffa",
+              "inverse-surface": "#2c3131",
+              "surface-container-highest": "#dee3e3",
+              "on-background": "#171d1c",
+              "tertiary": "#3a645a",
+              "on-surface": "#171d1c",
+              "on-error-container": "#93000a",
+              "outline": "#6f7a6d",
+              "secondary": "#006e1e",
+              "on-primary-fixed": "#002107",
+              "on-primary-container": "#f7fff2",
+              "on-surface-variant": "#3f4a3e",
+              "on-primary-fixed-variant": "#00531c",
+              "on-secondary-container": "#007320",
+              "surface-bright": "#f5faf9",
+              "primary-fixed-dim": "#7adb84",
+              "on-tertiary-fixed": "#00201b",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f0f5f4",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#005315",
+              "surface-tint": "#006e28",
+              "background": "#f5faf9",
+              "surface": "#f5faf9",
+              "tertiary-fixed": "#bfece0",
+              "tertiary-fixed-dim": "#a3d0c4",
+              "surface-container": "#eaefee",
+              "primary-fixed": "#96f89e",
+              "secondary-fixed": "#83fc86",
+              "inverse-on-surface": "#edf2f1",
+              "primary-container": "#21863a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "kannada": ["Noto Sans Kannada"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .kannada-text { font-family: 'Noto Sans Kannada', sans-serif; }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ghost-border {
+            border: 1px solid rgba(190, 202, 186, 0.2);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 107, 39, 0.1);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-[0_8px_32px_0_rgba(23,29,28,0.04)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-emerald-800 italic">Akshara</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-emerald-900/60 hover:text-emerald-900 transition-all duration-500 font-inter tracking-tight font-light" href="#">Home</a>
+<a class="text-emerald-700 font-semibold border-b-2 border-emerald-600 font-inter tracking-tight" href="#">Fonts</a>
+<a class="text-emerald-900/60 hover:text-emerald-900 transition-all duration-500 font-inter tracking-tight font-light" href="#">Heritage</a>
+<a class="text-emerald-900/60 hover:text-emerald-900 transition-all duration-500 font-inter tracking-tight font-light" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-emerald-50/50 rounded-full transition-all duration-500 active:scale-95">
+<span class="material-symbols-outlined text-emerald-900">shopping_bag</span>
+</button>
+<button class="p-2 hover:bg-emerald-50/50 rounded-full transition-all duration-500 active:scale-95">
+<span class="material-symbols-outlined text-emerald-900">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Hero Specimen Header -->
+<section class="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<span class="text-tertiary font-label text-sm tracking-[0.2em] uppercase mb-4 block">Specimen Explorer / Series 01</span>
+<h1 class="text-6xl md:text-8xl font-bold tracking-tighter text-primary leading-none mb-6">Kaveri Serif</h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    A high-contrast Kannada typeface designed for editorial excellence. Inspired by the flowing currents of the Kaveri river and traditional stone inscriptions.
+                </p>
+</div>
+<div class="lg:col-span-5 flex justify-end">
+<div class="text-[12rem] lg:text-[18rem] kannada-text text-primary leading-none opacity-10 pointer-events-none absolute -right-10 top-20 select-none">ಕ</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-6 py-2 rounded-full bg-primary text-on-primary font-medium">Variable Font</span>
+<span class="px-6 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant">18 Weights</span>
+<span class="px-6 py-2 rounded-full border border-outline-variant/30 text-on-surface-variant">Heritage Series</span>
+</div>
+</div>
+</section>
+<!-- Micro-Playground Section -->
+<section class="mb-24">
+<div class="bg-surface-container-low rounded-[2rem] p-8 lg:p-12 relative overflow-hidden ghost-border">
+<div class="relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+<div>
+<h2 class="text-2xl font-semibold text-primary mb-2">Micro-Playground</h2>
+<p class="text-on-surface-variant text-sm">Experience the fluid rendering of Kaveri Serif in real-time.</p>
+</div>
+<div class="flex bg-surface-container-high p-1.5 rounded-full ghost-border">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full text-sm font-medium">Text Mode</button>
+<button class="px-6 py-2 text-on-surface-variant hover:text-primary rounded-full text-sm font-medium transition-colors">Glyph Map</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest glass-panel rounded-3xl p-8 lg:p-16 min-h-[400px] flex flex-col justify-center shadow-sm">
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-4xl lg:text-7xl kannada-text text-on-surface leading-tight resize-none placeholder-on-surface-variant/20" placeholder="ನಿಮ್ಮ ಪಠ್ಯವನ್ನು ಇಲ್ಲಿ ಟೈಪ್ ಮಾಡಿ..." spellcheck="false">ಕನ್ನಡಿಗರ ಹೆಮ್ಮೆಯ ಅಕ್ಷರ ವಿನ್ಯಾಸ ಸ್ಟುಡಿಯೋ - ಅಕ್ಷರ.</textarea>
+</div>
+<div class="mt-8 flex flex-wrap items-center gap-8">
+<div class="flex items-center gap-4">
+<span class="text-xs font-label uppercase tracking-widest text-tertiary">Weight</span>
+<input class="accent-primary w-48 h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer" max="900" min="100" type="range" value="400"/>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-label uppercase tracking-widest text-tertiary">Size</span>
+<div class="flex items-center gap-2">
+<span class="text-sm font-medium">72px</span>
+</div>
+</div>
+<div class="ml-auto">
+<button class="flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
+<span>Download Sample PDF</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Character Waterfall -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-bold text-primary mb-4">Character Waterfall</h2>
+<p class="text-on-surface-variant max-w-md leading-relaxed">Observing legibility across various optical sizes, from display to micro-captioning.</p>
+</div>
+<div class="text-right">
+<span class="text-5xl font-bold text-outline-variant/20">Waterfall.01</span>
+</div>
+</div>
+<div class="space-y-12 border-l-2 border-primary/10 pl-8 lg:pl-16">
+<div class="group cursor-default">
+<div class="flex items-baseline gap-6 mb-2">
+<span class="text-xs font-mono text-tertiary-container/60">120pt</span>
+<div class="h-px flex-1 bg-surface-container"></div>
+</div>
+<p class="text-[120pt] kannada-text leading-none text-on-surface transition-colors group-hover:text-primary">ಅಕ್ಷರ ವಿನ್ಯಾಸ</p>
+</div>
+<div class="group cursor-default">
+<div class="flex items-baseline gap-6 mb-2">
+<span class="text-xs font-mono text-tertiary-container/60">72pt</span>
+<div class="h-px flex-1 bg-surface-container"></div>
+</div>
+<p class="text-[72pt] kannada-text leading-none text-on-surface transition-colors group-hover:text-primary">ಸೃಜನಶೀಲತೆಯ ಹೊಸ ಆಯಾಮ</p>
+</div>
+<div class="group cursor-default">
+<div class="flex items-baseline gap-6 mb-2">
+<span class="text-xs font-mono text-tertiary-container/60">48pt</span>
+<div class="h-px flex-1 bg-surface-container"></div>
+</div>
+<p class="text-[48pt] kannada-text leading-none text-on-surface transition-colors group-hover:text-primary">ಕನ್ನಡ ಲಿಪಿಯ ವೈಭವ ಮತ್ತು ಪರಂಪರೆ.</p>
+</div>
+<div class="group cursor-default">
+<div class="flex items-baseline gap-6 mb-2">
+<span class="text-xs font-mono text-tertiary-container/60">24pt</span>
+<div class="h-px flex-1 bg-surface-container"></div>
+</div>
+<p class="text-[24pt] kannada-text leading-relaxed text-on-surface transition-colors group-hover:text-primary">ಒಂದು ಭಾಷೆಯ ಆತ್ಮವು ಅದರ ಲಿಪಿಯಲ್ಲಿ ಅಡಗಿದೆ. ನಾವು ಆ ಅಕ್ಷರಗಳಿಗೆ ಹೊಸ ರೂಪವನ್ನು ನೀಡುತ್ತೇವೆ.</p>
+</div>
+<div class="group cursor-default">
+<div class="flex items-baseline gap-6 mb-2">
+<span class="text-xs font-mono text-tertiary-container/60">12pt</span>
+<div class="h-px flex-1 bg-surface-container"></div>
+</div>
+<p class="text-[12pt] kannada-text leading-relaxed text-on-surface transition-colors group-hover:text-primary">ಇದು ಅಕ್ಷರ ಸ್ಟುಡಿಯೋದ ಕಾವೇರಿ ಅಕ್ಷರ ವಿನ್ಯಾಸದ ಒಂದು ಚಿಕ್ಕ ಉದಾಹರಣೆ. ಈ ವಿನ್ಯಾಸವು ಓದುಗರಿಗೆ ಸುಲಭವಾಗುವಂತೆ ಮತ್ತು ಅಂದವಾಗಿ ಕಾಣುವಂತೆ ರೂಪಿಸಲಾಗಿದೆ. ಗ್ರಂಥಾಲಯಗಳು ಮತ್ತು ಪ್ರಕಾಶನ ಸಂಸ್ಥೆಗಳಿಗೆ ಇದು ಅತ್ಯಂತ ಸೂಕ್ತವಾಗಿದೆ.</p>
+</div>
+</div>
+</section>
+<!-- Specimen Table (Bento Grid Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-white rounded-[2rem] p-10 ghost-border shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<h3 class="text-xl font-semibold mb-8 flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">analytics</span>
+                    Technical Specifications
+                </h3>
+<div class="grid grid-cols-2 gap-y-8 gap-x-12">
+<div class="space-y-1">
+<p class="text-xs font-label uppercase tracking-widest text-tertiary">Version</p>
+<p class="text-on-surface font-medium">v1.2.0 Build 2024</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-label uppercase tracking-widest text-tertiary">Glyph Count</p>
+<p class="text-on-surface font-medium">842 Characters</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-label uppercase tracking-widest text-tertiary">Language Support</p>
+<p class="text-on-surface font-medium">Kannada, Sanskrit, English</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-label uppercase tracking-widest text-tertiary">Formats</p>
+<p class="text-on-surface font-medium">OTF, WOFF2, Variable</p>
+</div>
+<div class="col-span-2 pt-4">
+<p class="text-xs font-label uppercase tracking-widest text-tertiary mb-4">Font Features</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-mono">Ligatures [liga]</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-mono">Kerning [kern]</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-mono">Oldstyle Figs [onum]</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-xs font-mono">Slashed Zero [zero]</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary rounded-[2rem] p-10 text-on-primary flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="text-xl font-semibold mb-2">Ready to use?</h3>
+<p class="text-primary-fixed/80 text-sm mb-8 leading-relaxed">Licensing available for web, print, and mobile application development.</p>
+</div>
+<div class="space-y-4 relative z-10">
+<button class="w-full py-4 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors active:scale-95">
+                        Purchase License
+                    </button>
+<button class="w-full py-4 bg-primary-container/50 border border-white/20 text-on-primary rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-primary-container transition-colors active:scale-95">
+                        Test Installation
+                    </button>
+</div>
+<div class="absolute -bottom-10 -right-10 text-[10rem] text-white/5 kannada-text select-none">ಅ</div>
+</div>
+</section>
+</main>
+<!-- SideNavBar (Suppressed as it's a detail page, but following structure if it were needed for filtering weights) -->
+<!-- Suppression logic applied: detail page focuses on content canvas. -->
+<!-- Footer -->
+<footer class="bg-emerald-900 w-full py-12 px-8 flex flex-col items-center gap-6 border-t border-emerald-800/30">
+<div class="flex flex-col md:flex-row justify-between w-full max-w-7xl items-center gap-8">
+<div class="text-emerald-200 font-bold text-xl">Akshara</div>
+<div class="flex gap-8">
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-700" href="#">Licensing</a>
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-700" href="#">Custom Type</a>
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-700" href="#">Privacy</a>
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase hover:underline decoration-emerald-500 underline-offset-4 transition-all duration-700" href="#">Contact</a>
+</div>
+</div>
+<div class="text-emerald-50/30 font-inter text-[10px] tracking-widest uppercase mt-8">
+            © 2024 Akshara Type Studio. Crafted in Karnataka.
+        </div>
+</footer>
+<!-- FAB Suppression: Details screen doesn't require global FAB -->
+</body></html>

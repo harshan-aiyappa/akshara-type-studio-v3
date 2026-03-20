@@ -1,0 +1,276 @@
+
+@font-face{
+font-family:'ATSChikkamagaluru-ColorRegular';
+Font-weight:normal;
+font-style: normal;
+
+src: url("woff2/ATSChikkamagaluru-ColorRegular.woff2") format("woff2")
+
+}
+
+
+@font-face{
+font-family:'ATSChikkamagaluru-Regular';
+Font-weight:normal;
+font-style: normal;
+src:url("woff2/ATSChikkamagaluru-Regular.woff2") format("woff2")}
+
+
+
+
+.ccr{
+font-family:'ATSChikkamagaluru-ColorRegular';
+font-size:64px;
+line-height: 2;
+}
+
+.cr{
+font-family:'ATSChikkamagaluru-Regular';
+font-size:64px;
+line-height:2;
+}
+
+
+
+.font-intro-chikkamagaluru-color-regular {
+font-family:'ATSChikkamagaluru-ColorRegular';
+Font-weight:normal;
+font-size: 119px;	
+font-style: normal;
+line-height: normal;
+
+}
+	
+.font-intro-chikkamagaluru-regular{
+font-family:ATSChikkamagaluru-Regular;
+Font-weight:400;
+font-size: 119px;	
+font-style: normal;
+line-height: normal;
+}
+
+
+
+
+.chikkamagaluru-color-regular{
+font-family:ATSChikkamagaluru-ColorRegular;
+Font-weight:normal;
+font-style: normal;
+line-height: normal;
+}
+
+.variant-ordn{
+font-family:ATSChikkamagaluru-ColorRegular;
+font-feature-settings: "ordn";
+line-height: 2;
+}
+
+.variant-frac{
+font-family:ATSChikkamagaluru-ColorRegular;
+font-feature-settings: "frac";
+line-height: 2;
+}
+
+.variant-tnum{
+font-family:ATSChikkamagaluru-ColorRegular;
+font-feature-settings:"tnum";
+line-height: 2;
+}
+
+.variant-ss{
+font-family:ATSChikkamagaluru-ColorRegular;
+font-feature-settings:"ss01", "ss02";
+line-height: 2;
+}
+
+
+.variant-sub{
+font-family:ATSChikkamagaluru-ColorRegular;
+font-feature-settings:"subs";
+line-height: 2;
+}
+
+
+.variant-sup{
+font-family:ATSChikkamagaluru-ColorRegular;
+font-feature-settings:"sups";
+line-height: 2;
+}
+
+
+.variantoff{
+font-family:ATSChikkamagaluru-ColorRegular;
+font-variant-ligatures: none ;
+line-height: 2;
+
+}
+
+.opacity {
+	opacity: 0.5;
+}
+
+
+.edit-h-chikkamagaluru-color-regular {
+font-family:'ATSChikkamagaluru-ColorRegular';
+font-weight: normal;
+font-size: 109px;
+line-height: 1.2;
+letter-spacing: normal;	
+font-feature-settings: "ss01", "ss02";	
+}
+
+.edit-p-chikkamagaluru-color-regular {
+font-family:ATSChikkamagaluru-ColorRegular;
+font-weight: normal;
+font-size: 32px;
+line-height: 1.2;
+letter-spacing: normal;	
+font-feature-settings: "ss01", "ss02";	
+
+}
+
+
+
+
+
+
+.chikkamagaluru, .chikkamagaluru a {
+	background-color: #f1f4f5;
+	color: #151618
+}
+
+
+
+
+
+
+input[type=range] {
+	height: 1px;
+	-webkit-appearance: none;
+	width: 100%;
+}
+
+input[type=range]:focus {
+	outline: 0
+}
+
+
+.custom-select {
+  position: relative;
+  border-radius: 0px;
+  border: 1px solid #151618;
+  background: #f1f4f5;
+  color:#151618;
+  padding:2px 8px 2px 8px;
+  width:100%;
+ 
+}
+
+
+
+
+
+
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 1px;
+	cursor: pointer;
+	box-shadow: none;
+	border: none;
+	background: #151618;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: none;
+	border: 4px solid #f1f4f5;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	background: #151618;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -11px
+}
+
+
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 1px;
+	cursor: pointer;
+	box-shadow: none;
+	border: none;
+	background: #151618;
+}
+
+input[type=range]::-moz-range-thumb {
+	box-shadow: none;
+	border: 4px solid #f1f4f5;
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	cursor: pointer;
+	background: #151618;
+}
+
+input[type=radio]{
+  appearance: none;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border: 1px solid  #151618;
+  margin-right: 0px;
+  position: relative;
+  top: 0px;
+}
+
+input[type=radio]:checked {
+  border: 4px solid #151618;
+}
+
+
+
+input[type=checkbox]{
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid  #151618;
+  margin-right: 0px;
+  position: relative;
+  top:0px;
+}
+
+input[type=checkbox]:checked {
+  border: 4px solid #151618;
+
+}
+
+
+
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 1px;
+	cursor: pointer;
+	background: 0;
+	border-color: transparent;
+	color: transparent
+}
+
+input[type=range]::-ms-thumb {
+
+	box-shadow: none;
+	border: 4px solid #f1f4f5;
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background: #151618;
+	cursor: pointer
+}
+
+
+
+

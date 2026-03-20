@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+
+<url>
+  <loc>https://aksharatypestudio.in/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://aksharatypestudio.in/fonts/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aksharatypestudio.in/keyboard/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aksharatypestudio.in/keyboard/online-kannada-typing/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aksharatypestudio.in/about/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+	
+<url>
+  <loc>https://aksharatypestudio.in/help/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aksharatypestudio.in/contact/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+	
+<url>
+  <loc>https://aksharatypestudio.in/fonts/bandipura/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://aksharatypestudio.in/fonts/bengaluru/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://aksharatypestudio.in/fonts/bengaluru/LED.html</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+	
+<url>
+  <loc>https://aksharatypestudio.in/fonts/chikkamagaluru</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+	
+
+
+
+<url>
+  <loc>https://aksharatypestudio.in/404</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://aksharatypestudio.in/agreement/</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+<loc>https://aksharatypestudio.in/tools/english-to-kannada-typing</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://aksharatypestudio.in/tools/speech-to-text</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+<loc>https://aksharatypestudio.in/tools/image-to-text</loc>
+  <lastmod>2021-12-05T08:03:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+
+
+</urlset>

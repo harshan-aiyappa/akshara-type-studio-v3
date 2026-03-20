@@ -1,0 +1,293 @@
+/*Dot*/
+@font-face{
+font-family:ATSBengaluru-DotRegular;
+Font-weight:100;
+font-style: DotRegular;
+font-display: swap;
+src:url(woff2/ATSBengaluru-DotRegular.woff2) format('woff2')}
+
+@font-face{
+font-family:ATSBengaluru-DotBold;
+Font-weight:150;
+font-style: DotBold;
+font-display: swap;
+
+src:url(woff2/ATSBengaluru-DotBold.woff2) format('woff2')}
+
+
+/*Pixel*/
+
+@font-face{
+font-family:ATSBengaluru-PixelRegular;
+Font-weight:200;
+font-style: PixelRegular;
+font-display: swap;
+src:url(woff2/ATSBengaluru-PixelRegular.woff2) format('woff2')}
+
+@font-face{
+font-family:ATSBengaluru-PixelBold;
+Font-weight:250;
+font-style: PixelBold;
+font-display: swap;
+
+src:url(woff2/ATSBengaluru-PixelBold.woff2) format('woff2')}
+
+
+/*Smooth*/
+
+@font-face{
+font-family:ATSBengaluru-SmoothRegular;
+Font-weight:300;
+font-style: SmoothRegular;
+font-display: swap;
+src:url(woff2/ATSBengaluru-SmoothRegular.woff2) format('woff2')}
+
+
+@font-face{
+font-family:ATSBengaluru-SmoothBold;
+Font-weight:350;
+font-style: SmoothBold;
+font-display: swap;
+
+src:url(woff2/ATSBengaluru-SmoothBold.woff2) format('woff2')}
+
+
+
+/*Square*/
+
+@font-face{
+font-family:ATSBengaluru-SquareRegular;
+Font-weight:400;
+font-style: SquareRegular;
+font-display: swap;
+src:url(woff2/ATSBengaluru-SquareRegular.woff2) format('woff2')}
+
+
+@font-face{
+font-family:ATSBengaluru-SquareBold;
+Font-weight:450;
+font-style: SquareBold;
+font-display: swap;
+
+src:url(woff2/ATSBengaluru-SquareBold.woff2) format('woff2')}
+
+
+/*LED*/
+
+@font-face{
+font-family:ATSBengaluru-LEDRegular;
+Font-weight:500;
+font-style: LEDRegular;
+font-display: swap;
+src:url("woff2/ATSBengaluru-LEDRegular.woff2") format('woff2')}
+
+
+@font-face{
+font-family:ATSBengaluru-LEDBold;
+Font-weight:550;
+font-style: LEDBold;
+font-display: swap;
+
+src:url(woff2/ATSBengaluru-LEDBold.woff2) format('woff2')}
+
+
+.new-white{
+	color: #F1F1F1; 
+}
+
+.bdr{
+font-family:ATSBengaluru-DotRegular;
+font-size:80px;
+line-height: normal;
+}
+
+.bdb{
+font-family:ATSBengaluru-DotBold;
+font-size:80px;
+line-height: normal;
+}
+
+.bpr{
+font-family:ATSBengaluru-PixelRegular;
+font-size:80px;
+line-height: normal;
+}
+
+.bpb{
+font-family:ATSBengaluru-PixelBold;
+font-size:80px;
+line-height: normal;
+}
+
+.bsr{
+font-family:ATSBengaluru-SmoothRegular;
+font-size:80px;
+line-height: normal;
+}
+
+.bsb{
+font-family:ATSBengaluru-SmoothBold;
+font-size:80px;
+line-height: normal;
+}
+
+.bsqr{
+font-family:ATSBengaluru-SquareRegular;
+font-size:80px;
+line-height: normal;
+}
+
+.bsqb{
+font-family:ATSBengaluru-SquareBold;
+font-size:80px;
+line-height: normal;
+}
+
+
+.blr{
+font-family:ATSBengaluru-LEDRegular;
+font-size:80px;
+line-height: normal;
+}
+
+.blb{
+font-family:ATSBengaluru-LEDBold;
+font-size:80px;
+line-height: normal;
+}
+
+
+
+
+.font-intro{
+font-family:ATSBengaluru-SquareBold;
+Font-weight:450;
+font-size: 130px;	
+font-style: normal;
+line-height: normal;
+}
+	
+
+
+.bengaluru{
+font-family:ATSBengaluru-SquareRegular;
+Font-weight:400;
+font-style: normal;
+line-height: normal;
+}
+
+
+
+.variant{
+font-feature-settings: "frac", "ss01", "liga", "dlig","fwid", "hwid";
+}
+
+
+.variantoff{
+font-variant-ligatures: none ;
+line-height: 20pt;
+}
+
+.opacity {
+	opacity: 0.5;
+}
+
+
+.edit-h-bengaluru {
+font-family:ATSBengaluru-SquareRegular;
+font-weight: 100;
+font-size: 119px;
+line-height: 1.2;
+letter-spacing: normal;	
+font-feature-settings: "fwid", "hwid";	
+}
+
+.edit-p-bengaluru {
+font-family:ATSBengaluru-SquareRegular;
+font-weight: 100;
+font-size: 42px;
+line-height: 1.2;
+letter-spacing: normal;	
+font-feature-settings: "fwid", "hwid";	
+}
+
+
+
+
+
+
+.LED, .LED a {
+	background-color: #040506;
+	color: #ff5c00;
+}
+
+.font-intro-LED{
+font-family:ATSBengaluru-LEDBold;
+Font-weight:500;
+font-size: 119px;	
+font-style: normal;
+line-height: normal;
+}
+
+.edit-h-bengaluru-LED {
+font-family:ATSBengaluru-LEDBold;
+font-weight: 550;
+font-size: 119px;
+line-height: 1.2;
+letter-spacing: normal;	
+font-feature-settings: "fwid", "hwid";	
+}
+
+
+.edit-p-bengaluru-LED {
+font-family:ATSBengaluru-LEDRegular;
+font-weight: 500;
+font-size: 42px;
+line-height: 1.2;
+letter-spacing: normal;	
+font-feature-settings: "fwid", "hwid";	
+}
+
+
+#scroll-container {
+ overflow: hidden;
+
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 8s linear infinite;
+  -webkit-animation: my-animation 7s linear infinite;
+  animation: my-animation 8s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { moz-transform: translateX(100%); }
+  to { moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { webkit-transform: translateX(100%); }
+  to { webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+	}
+}
+
+

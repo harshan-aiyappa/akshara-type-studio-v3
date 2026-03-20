@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Akshara Type Studio | The Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;800&amp;family=Noto+Sans+Kannada:wght@100;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#becaba",
+              "error-container": "#ffdad6",
+              "surface-variant": "#dee3e3",
+              "surface-dim": "#d6dbda",
+              "tertiary-container": "#527d73",
+              "on-tertiary-fixed-variant": "#244e45",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#66df6d",
+              "inverse-primary": "#7adb84",
+              "on-error": "#ffffff",
+              "secondary-container": "#80f983",
+              "surface-container-high": "#e4e9e8",
+              "on-tertiary": "#ffffff",
+              "primary": "#006b27",
+              "on-secondary-fixed": "#002204",
+              "on-tertiary-container": "#f4fffa",
+              "inverse-surface": "#2c3131",
+              "surface-container-highest": "#dee3e3",
+              "on-background": "#171d1c",
+              "tertiary": "#3a645a",
+              "on-surface": "#171d1c",
+              "on-error-container": "#93000a",
+              "outline": "#6f7a6d",
+              "secondary": "#006e1e",
+              "on-primary-fixed": "#002107",
+              "on-primary-container": "#f7fff2",
+              "on-surface-variant": "#3f4a3e",
+              "on-primary-fixed-variant": "#00531c",
+              "on-secondary-container": "#007320",
+              "surface-bright": "#f5faf9",
+              "primary-fixed-dim": "#7adb84",
+              "on-tertiary-fixed": "#00201b",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f0f5f4",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#005315",
+              "surface-tint": "#006e28",
+              "background": "#f5faf9",
+              "surface": "#f5faf9",
+              "tertiary-fixed": "#bfece0",
+              "tertiary-fixed-dim": "#a3d0c4",
+              "surface-container": "#eaefee",
+              "primary-fixed": "#96f89e",
+              "secondary-fixed": "#83fc86",
+              "inverse-on-surface": "#edf2f1",
+              "primary-container": "#21863a"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"],
+              "kannada": ["Noto Sans Kannada", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .type-preview:hover {
+            font-weight: 700;
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/20 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(23,29,28,0.04)]">
+<nav class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-emerald-800 dark:text-emerald-100 italic">Akshara</span>
+<div class="hidden md:flex items-center gap-6 font-inter tracking-tight font-light">
+<a class="text-emerald-900/60 dark:text-emerald-50/60 hover:text-emerald-900 dark:hover:text-emerald-50 transition-all duration-500 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/50 px-3 py-1 rounded-lg" href="#">Home</a>
+<a class="text-emerald-700 dark:text-emerald-400 font-semibold border-b-2 border-emerald-600 px-3 py-1" href="#">Fonts</a>
+<a class="text-emerald-900/60 dark:text-emerald-50/60 hover:text-emerald-900 dark:hover:text-emerald-50 transition-all duration-500 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/50 px-3 py-1 rounded-lg" href="#">Heritage</a>
+<a class="text-emerald-900/60 dark:text-emerald-50/60 hover:text-emerald-900 dark:hover:text-emerald-50 transition-all duration-500 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/50 px-3 py-1 rounded-lg" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-high border-none rounded-full px-6 py-2 text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search archive..." type="text"/>
+</div>
+<button class="material-symbols-outlined p-2 hover:bg-emerald-50/50 rounded-full transition-all">shopping_bag</button>
+<button class="material-symbols-outlined p-2 hover:bg-emerald-50/50 rounded-full transition-all">menu</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 min-h-screen flex">
+<!-- SideNavBar - Filter Specimen -->
+<aside class="h-full w-72 fixed left-0 top-0 pt-24 hidden lg:flex flex-col py-8 gap-4 bg-emerald-50/70 dark:bg-emerald-950/70 backdrop-blur-2xl shadow-2xl rounded-r-3xl z-40">
+<div class="px-8 mb-6">
+<h2 class="text-lg font-semibold text-emerald-800 dark:text-emerald-100 font-kannada">Filter Specimen</h2>
+<p class="text-sm font-inter text-on-surface-variant">Refine by Style &amp; Weight</p>
+</div>
+<nav class="flex flex-col gap-2">
+<button class="flex items-center gap-4 px-6 py-3 mx-2 text-emerald-800/70 dark:text-emerald-200/70 hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-transform hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="font_download">font_download</span>
+<span class="text-sm font-medium">Serif</span>
+</button>
+<button class="flex items-center gap-4 px-6 py-3 mx-2 bg-emerald-600 text-white rounded-full shadow-lg shadow-emerald-900/10 transition-transform hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="text_fields">text_fields</span>
+<span class="text-sm font-medium">Sans</span>
+</button>
+<button class="flex items-center gap-4 px-6 py-3 mx-2 text-emerald-800/70 dark:text-emerald-200/70 hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-transform hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="text-sm font-medium">Display</span>
+</button>
+<button class="flex items-center gap-4 px-6 py-3 mx-2 text-emerald-800/70 dark:text-emerald-200/70 hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-transform hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="text-sm font-medium">Calligraphy</span>
+</button>
+<button class="flex items-center gap-4 px-6 py-3 mx-2 text-emerald-800/70 dark:text-emerald-200/70 hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-transform hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="text-sm font-medium">Heritage</span>
+</button>
+</nav>
+<div class="mt-auto px-6 pb-8">
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-white font-semibold rounded-xl shadow-xl hover:shadow-primary/20 transition-all active:scale-95">
+                    Apply Filters
+                </button>
+</div>
+</aside>
+<!-- Main Content (Canvas) -->
+<section class="flex-1 lg:ml-72 px-8 py-12">
+<!-- Hero Header -->
+<div class="mb-20 max-w-4xl">
+<span class="text-tertiary font-medium tracking-[0.2em] uppercase text-xs block mb-4">Studio Archives</span>
+<h1 class="text-6xl font-extrabold tracking-tighter text-primary mb-6 leading-tight">
+                    Preserving the soul of <br/>
+<span class="font-kannada font-normal text-7xl inline-block -translate-y-2 opacity-80">ಕನ್ನಡ</span> typography.
+                </h1>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl">
+                    A curated collection of digital artifacts, ranging from classical stone-carved heritage styles to modern neo-grotesque sans-serifs for the next generation of Kannada interfaces.
+                </p>
+</div>
+<!-- Font Grid (2-column focused) -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
+<!-- Specimen Card 1 -->
+<div class="group relative bg-surface-container-low rounded-xl p-10 transition-all duration-500 hover:bg-surface-container-lowest hover:shadow-[0_40px_60px_-15px_rgba(23,29,28,0.06)] overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-1">Vijayanagara</h3>
+<span class="text-sm text-tertiary">12 Weights • Heritage Serif</span>
+</div>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs font-semibold text-on-surface-variant">NEW RELEASE</span>
+</div>
+<div class="type-preview font-kannada text-8xl text-primary leading-tight mb-12 transition-all duration-700 ease-out cursor-default">
+                        ಕನ್ನಡ ಅಕ್ಷರ
+                    </div>
+<div class="flex justify-between items-end">
+<p class="text-sm text-on-surface-variant max-w-[240px]">Inspired by 14th-century royal inscriptions of Hampi.</p>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all group/btn">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Specimen Card 2 -->
+<div class="group relative bg-surface-container-low rounded-xl p-10 transition-all duration-500 hover:bg-surface-container-lowest hover:shadow-[0_40px_60px_-15px_rgba(23,29,28,0.06)]">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-1">Kaveri Sans</h3>
+<span class="text-sm text-tertiary">08 Weights • Modern Sans</span>
+</div>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-xs font-semibold text-on-surface-variant">POPULAR</span>
+</div>
+<div class="type-preview font-kannada text-8xl text-primary leading-tight mb-12 transition-all duration-700 ease-out cursor-default">
+                        ಜ್ಞಾನಪೀಠ
+                    </div>
+<div class="flex justify-between items-end">
+<p class="text-sm text-on-surface-variant max-w-[240px]">Optimized for screen readability and high-density displays.</p>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Specimen Card 3 -->
+<div class="group relative bg-surface-container-low rounded-xl p-10 transition-all duration-500 hover:bg-surface-container-lowest hover:shadow-[0_40px_60px_-15px_rgba(23,29,28,0.06)]">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-1">Malgudi Display</h3>
+<span class="text-sm text-tertiary">03 Weights • Calligraphy</span>
+</div>
+</div>
+<div class="type-preview font-kannada text-8xl text-primary leading-tight mb-12 transition-all duration-700 ease-out cursor-default">
+                        ಕಲೆ ಸಾಹಿತ್ಯ
+                    </div>
+<div class="flex justify-between items-end">
+<p class="text-sm text-on-surface-variant max-w-[240px]">A poetic approach to stroke weight and terminal curves.</p>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Specimen Card 4 -->
+<div class="group relative bg-surface-container-low rounded-xl p-10 transition-all duration-500 hover:bg-surface-container-lowest hover:shadow-[0_40px_60px_-15px_rgba(23,29,28,0.06)]">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-1">Sahitya Bold</h3>
+<span class="text-sm text-tertiary">Single Weight • Editorial</span>
+</div>
+</div>
+<div class="type-preview font-kannada text-8xl text-primary leading-tight mb-12 transition-all duration-700 ease-out cursor-default">
+                        ಇತಿಹಾಸ
+                    </div>
+<div class="flex justify-between items-end">
+<p class="text-sm text-on-surface-variant max-w-[240px]">Strong, authoritative glyphs for headlines and logotypes.</p>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento Layout Feature -->
+<div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 bg-emerald-900 rounded-xl p-12 text-white flex flex-col justify-end min-h-[400px] relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay">
+<div class="absolute top-10 right-10 text-[20rem] font-kannada leading-none">ಅ</div>
+</div>
+<span class="text-emerald-400 text-sm font-bold tracking-widest uppercase mb-4">Type Lab</span>
+<h2 class="text-4xl font-bold mb-6 max-w-md leading-tight">Variable Fonts: The Future of Kannada Script.</h2>
+<p class="text-emerald-50/70 text-lg max-w-lg mb-8">One file. Infinite weights. Experience the fluid evolution of Kannada typography with our new Variable-ready library.</p>
+<a class="inline-flex items-center gap-2 font-semibold text-white group underline decoration-emerald-500 underline-offset-8" href="#">
+                        Learn about Variable Types 
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-8 flex flex-col">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Historical Documentation</h3>
+<p class="text-on-surface-variant text-sm mb-auto">Access our collection of scanned palm-leaf manuscripts that inspire our typeface designs.</p>
+<button class="mt-8 py-3 bg-white text-on-surface font-semibold rounded-lg shadow-sm hover:shadow-md transition-all">Browse Archive</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-emerald-900 dark:bg-black flex flex-col items-center gap-6 border-t border-emerald-800/30">
+<div class="flex gap-12 mb-4">
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase transition-all hover:underline decoration-emerald-500 underline-offset-4" href="#">Licensing</a>
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase transition-all hover:underline decoration-emerald-500 underline-offset-4" href="#">Custom Type</a>
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase transition-all hover:underline decoration-emerald-500 underline-offset-4" href="#">Privacy</a>
+<a class="text-emerald-50/50 hover:text-emerald-50 font-inter text-xs tracking-widest uppercase transition-all hover:underline decoration-emerald-500 underline-offset-4" href="#">Contact</a>
+</div>
+<div class="text-emerald-200 font-bold italic text-xl">Akshara</div>
+<p class="text-emerald-50/40 text-[10px] tracking-[0.3em] uppercase">© 2024 Akshara Type Studio. Crafted in Karnataka.</p>
+</footer>
+</body></html>

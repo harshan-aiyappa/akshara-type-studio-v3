@@ -1,0 +1,31 @@
+/* Coolors Exported Palette - https://coolors.co/2a8d40-3ab549-08372f-3bb849-08372f */
+
+- CSV
+
+2A8D40,3AB549,08372F,3BB849,08372F
+
+- With #
+
+#2A8D40, #3AB549, #08372F, #3BB849, #08372F
+
+- Array
+
+["2A8D40","3AB549","08372F","3BB849","08372F"]
+
+- Object
+
+{"Forest Green":"2A8D40","Jade Green":"3AB549","Evergreen":"08372F","Jade Green 2":"3BB849","Evergreen 2":"08372F"}
+
+- Extended Array
+
+[{"name":"Forest Green","hex":"2A8D40","rgb":[42,141,64],"cmyk":[70,0,55,45],"hsb":[133,70,55],"hsl":[133,54,36],"lab":[52,-45,33]},{"name":"Jade Green","hex":"3AB549","rgb":[58,181,73],"cmyk":[68,0,60,29],"hsb":[127,68,71],"hsl":[127,51,47],"lab":[65,-56,44]},{"name":"Evergreen","hex":"08372F","rgb":[8,55,47],"cmyk":[85,0,15,78],"hsb":[170,85,22],"hsl":[170,75,12],"lab":[20,-18,1]},{"name":"Jade Green","hex":"3BB849","rgb":[59,184,73],"cmyk":[68,0,60,28],"hsb":[127,68,72],"hsl":[127,51,48],"lab":[66,-57,46]},{"name":"Evergreen","hex":"08372F","rgb":[8,55,47],"cmyk":[85,0,15,78],"hsb":[170,85,22],"hsl":[170,75,12],"lab":[20,-18,1]}]
+
+- XML
+
+<palette>
+  <color name="Forest Green" hex="2A8D40" r="42" g="141" b="64" />
+  <color name="Jade Green" hex="3AB549" r="58" g="181" b="73" />
+  <color name="Evergreen" hex="08372F" r="8" g="55" b="47" />
+  <color name="Jade Green" hex="3BB849" r="59" g="184" b="73" />
+  <color name="Evergreen" hex="08372F" r="8" g="55" b="47" />
+</palette>

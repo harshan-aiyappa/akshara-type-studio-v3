@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Noto+Sans+Kannada:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "surface-tint": "#006e28",
+              "secondary": "#006e1e",
+              "tertiary": "#3a645a",
+              "primary-container": "#21863a",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-container": "#007320",
+              "surface-container-highest": "#dee3e3",
+              "on-surface-variant": "#3f4a3e",
+              "tertiary-fixed": "#bfece0",
+              "on-background": "#171d1c",
+              "secondary-fixed-dim": "#66df6d",
+              "secondary-fixed": "#83fc86",
+              "on-tertiary-fixed-variant": "#244e45",
+              "on-primary-fixed-variant": "#00531c",
+              "surface-bright": "#f5faf9",
+              "primary-fixed": "#96f89e",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#a3d0c4",
+              "surface-container-high": "#e4e9e8",
+              "inverse-on-surface": "#edf2f1",
+              "primary-fixed-dim": "#7adb84",
+              "on-secondary-fixed-variant": "#005315",
+              "error-container": "#ffdad6",
+              "primary": "#006b27",
+              "on-tertiary-container": "#f4fffa",
+              "on-tertiary-fixed": "#00201b",
+              "surface-container-low": "#f0f5f4",
+              "on-primary": "#ffffff",
+              "secondary-container": "#80f983",
+              "surface-variant": "#dee3e3",
+              "on-primary-container": "#f7fff2",
+              "on-primary-fixed": "#002107",
+              "inverse-surface": "#2c3131",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#171d1c",
+              "on-secondary-fixed": "#002204",
+              "outline-variant": "#becaba",
+              "outline": "#6f7a6d",
+              "background": "#f5faf9",
+              "error": "#ba1a1a",
+              "tertiary-container": "#527d73",
+              "surface": "#f5faf9",
+              "surface-dim": "#d6dbda",
+              "surface-container": "#eaefee",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#7adb84"
+            },
+            fontFamily: {
+              "headline": ["Inter", "Noto Sans Kannada"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ghost-border {
+            border: 1px solid rgba(190, 202, 186, 0.2);
+        }
+        .kannada-accent {
+            font-family: 'Noto Sans Kannada', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-emerald-900/10 dark:border-emerald-100/10 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl shadow-[0_40px_40px_-10px_rgba(23,29,28,0.04)] h-20 px-8 flex justify-between items-center max-w-full mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-emerald-900 dark:text-emerald-50">Type Lab</div>
+<div class="hidden md:flex gap-8 items-center font-['Inter'] font-medium tracking-tight">
+<a class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Type Lab</a>
+<a class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors duration-300" href="#">The Journal</a>
+<a class="text-emerald-900/60 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Archive</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 scale-95 active:scale-90 transition-transform">menu</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24">
+<!-- Hero Section -->
+<header class="max-w-4xl mb-24 relative">
+<span class="absolute -top-12 -left-8 text-9xl font-bold opacity-5 text-primary kannada-accent select-none">ಪರವಾನಗಿ</span>
+<h1 class="text-6xl md:text-7xl font-extrabold text-primary tracking-tight mb-6">Licensing &amp; <br/>Specimen Access</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Empowering designers with fluid Kannada typography. Choose a license that scales with your creative vision, from personal explorations to global enterprise systems.
+            </p>
+</header>
+<!-- Pricing Tiers Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+<!-- Personal Tier -->
+<div class="glass-card ghost-border rounded-xl p-8 flex flex-col h-full hover:shadow-[0_40px_40px_-10px_rgba(23,29,28,0.04)] transition-all duration-300 group">
+<div class="mb-8">
+<span class="text-xs font-['Inter'] uppercase tracking-widest text-tertiary font-bold mb-4 block">Personal</span>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-on-surface">₹2,499</span>
+<span class="text-on-surface-variant text-sm">/font</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-sm">Ideal for students, portfolio pieces, and independent non-commercial projects.</p>
+</div>
+<div class="space-y-4 mb-10 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Personal Portfolios</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Student Projects</span>
+</div>
+<div class="flex items-center gap-3 opacity-40">
+<span class="material-symbols-outlined text-sm">cancel</span>
+<span class="text-sm">Commercial Client Work</span>
+</div>
+</div>
+<button class="w-full py-4 px-6 rounded-xl bg-surface-container-high text-on-surface font-semibold hover:bg-surface-container-highest transition-colors">Select Personal</button>
+</div>
+<!-- Commercial Tier -->
+<div class="relative rounded-xl p-8 flex flex-col h-full shadow-[0_40px_40px_-10px_rgba(0,107,39,0.15)] bg-primary text-on-primary transition-all duration-300 scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+<div class="mb-8">
+<span class="text-xs font-['Inter'] uppercase tracking-widest text-primary-fixed font-bold mb-4 block">Commercial</span>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold">₹8,999</span>
+<span class="text-primary-fixed text-sm">/font</span>
+</div>
+<p class="mt-4 text-primary-fixed text-sm">Comprehensive rights for studios, agencies, and small-to-medium businesses.</p>
+</div>
+<div class="space-y-4 mb-10 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Unlimited Web Views</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Print &amp; Social Media</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Client Brand Identity</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Broadcast Rights</span>
+</div>
+</div>
+<button class="w-full py-4 px-6 rounded-xl bg-white text-primary font-extrabold hover:shadow-lg transition-all active:scale-95">Get Commercial</button>
+</div>
+<!-- Enterprise Tier -->
+<div class="glass-card ghost-border rounded-xl p-8 flex flex-col h-full hover:shadow-[0_40px_40px_-10px_rgba(23,29,28,0.04)] transition-all duration-300">
+<div class="mb-8">
+<span class="text-xs font-['Inter'] uppercase tracking-widest text-tertiary font-bold mb-4 block">Enterprise</span>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-on-surface">Custom</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-sm">Bespoke licensing for global corporations, apps with 1M+ users, and game studios.</p>
+</div>
+<div class="space-y-4 mb-10 flex-grow">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Full Family Access</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">App Embedding (Unlimited)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Legal Indemnification</span>
+</div>
+</div>
+<button class="w-full py-4 px-6 rounded-xl bg-surface-container-high text-on-surface font-semibold hover:bg-surface-container-highest transition-colors">Contact Studio</button>
+</div>
+</section>
+<!-- Feature Comparison Table -->
+<section class="mb-32 overflow-hidden">
+<h2 class="text-3xl font-bold text-primary mb-12 flex items-center gap-4">
+                Full Feature Matrix
+                <span class="h-px flex-grow bg-outline-variant/30"></span>
+</h2>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse text-left">
+<thead>
+<tr class="border-b border-outline-variant/20">
+<th class="py-6 px-4 text-sm font-bold uppercase tracking-widest text-on-surface-variant">Usage Rights</th>
+<th class="py-6 px-4 text-sm font-bold uppercase tracking-widest text-tertiary">Personal</th>
+<th class="py-6 px-4 text-sm font-bold uppercase tracking-widest text-primary">Commercial</th>
+<th class="py-6 px-4 text-sm font-bold uppercase tracking-widest text-on-surface">Enterprise</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-6 px-4">Web (Self-hosted)</td>
+<td class="py-6 px-4">10k views/mo</td>
+<td class="py-6 px-4 font-bold">Unlimited</td>
+<td class="py-6 px-4 font-bold">Unlimited</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-6 px-4">Print Production</td>
+<td class="py-6 px-4"><span class="material-symbols-outlined text-error/50">close</span></td>
+<td class="py-6 px-4">Up to 50k copies</td>
+<td class="py-6 px-4 font-bold">Unlimited</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-6 px-4">Mobile App Use</td>
+<td class="py-6 px-4"><span class="material-symbols-outlined text-error/50">close</span></td>
+<td class="py-6 px-4">1 App Instance</td>
+<td class="py-6 px-4 font-bold">Unlimited Apps</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-6 px-4">E-book &amp; Digital Pub</td>
+<td class="py-6 px-4"><span class="material-symbols-outlined text-error/50">close</span></td>
+<td class="py-6 px-4">3 Titles</td>
+<td class="py-6 px-4 font-bold">Unlimited Titles</td>
+</tr>
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-6 px-4">Logo &amp; Trademark</td>
+<td class="py-6 px-4"><span class="material-symbols-outlined text-error/50">close</span></td>
+<td class="py-6 px-4"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check</span></td>
+<td class="py-6 px-4"><span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<h2 class="text-4xl font-bold text-primary leading-tight">Frequently Asked Licensing Questions</h2>
+<div class="mt-8 p-6 bg-surface-container-low rounded-xl">
+<p class="text-sm italic text-on-surface-variant leading-relaxed">"ಪಾರದರ್ಶಕತೆ ನಮ್ಮ ಮೂಲಮಂತ್ರ - Transparency is our core value."</p>
+</div>
+</div>
+<div class="lg:col-span-8 space-y-6">
+<div class="glass-card ghost-border p-6 rounded-xl hover:bg-surface-container-lowest transition-all">
+<h3 class="font-bold text-lg mb-2">Can I upgrade my license later?</h3>
+<p class="text-on-surface-variant leading-relaxed">Yes. You can upgrade from Personal to Commercial or Enterprise by paying the difference within 6 months of the initial purchase.</p>
+</div>
+<div class="glass-card ghost-border p-6 rounded-xl hover:bg-surface-container-lowest transition-all">
+<h3 class="font-bold text-lg mb-2">Do the licenses expire?</h3>
+<p class="text-on-surface-variant leading-relaxed">All our licenses are perpetual. Once you purchase, you own the rights to use that version of the font forever within the scope of your license.</p>
+</div>
+<div class="glass-card ghost-border p-6 rounded-xl hover:bg-surface-container-lowest transition-all">
+<h3 class="font-bold text-lg mb-2">Are webfonts included in the desktop license?</h3>
+<p class="text-on-surface-variant leading-relaxed">Commercial licenses include both OTF/TTF (Desktop) and WOFF/WOFF2 (Web) formats at no extra cost.</p>
+</div>
+<div class="glass-card ghost-border p-6 rounded-xl hover:bg-surface-container-lowest transition-all">
+<h3 class="font-bold text-lg mb-2">Can I modify the glyphs?</h3>
+<p class="text-on-surface-variant leading-relaxed">Standard licenses do not allow direct modification of the font files. For custom modifications or exclusive weights, please contact the studio for an Enterprise quote.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-950 dark:bg-black w-full py-20 px-12 text-emerald-50">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full font-['Inter'] text-sm leading-relaxed">
+<div class="flex flex-col gap-6">
+<span class="text-emerald-50 font-bold text-xl">Type Lab</span>
+<p class="text-emerald-100/60">Exploring the intersection of tradition and digital modernity through Kannada typography.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold uppercase tracking-widest text-emerald-100/40">Connect</span>
+<a class="text-emerald-100/60 hover:text-emerald-200 transition-opacity" href="#">Instagram</a>
+<a class="text-emerald-100/60 hover:text-emerald-200 transition-opacity" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold uppercase tracking-widest text-emerald-100/40">Resources</span>
+<a class="text-emerald-100/60 hover:text-emerald-200 transition-opacity" href="#">Studio Details</a>
+<a class="text-emerald-100/60 hover:text-emerald-200 transition-opacity" href="#">Terms of Service</a>
+<a class="text-emerald-100/60 hover:text-emerald-200 transition-opacity" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold uppercase tracking-widest text-emerald-100/40">Studio</span>
+<p class="text-emerald-100/60">Malleshwaram, Bangalore<br/>Karnataka, India</p>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-emerald-900/50 flex justify-between items-center text-emerald-100/40">
+<p>© 2024 Kannada Typography Studio. All Rights Reserved.</p>
+<div class="flex gap-6">
+<span class="kannada-accent">ಕನ್ನಡ ಅಕ್ಷರಗಳ ಸೌಂದರ್ಯ</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,57 @@
+
+@font-face{
+font-family:ATS-Bandipura-Bold;
+Font-weight:normal;
+font-style: normal;
+
+src:url(woff2/ATSBandipura-Bold.woff2) format('woff2')}
+
+.bandipura{
+font-family:ATS-Bandipura-Bold;
+Font-weight:normal;
+font-style: normal;
+line-height: normal;
+}
+
+
+
+.variant{
+font-feature-settings: "frac", "ss01", "liga", "dlig";
+}
+
+
+
+.tabular {
+font-feature-settings:"tnum";
+}
+
+
+.variantoff{
+font-variant-ligatures: none ;
+}
+
+.opacity {
+	opacity: 0.5;
+}
+
+
+
+.edit-h-bandipura {
+font-family:ATS-Bandipura-Bold;
+font-size: 119px;
+font-style: normal;
+line-height: normal;
+font-feature-settings: "frac", "ss01", "liga", "dlig" 1;
+
+
+}
+ 
+
+.edit-p-bandipura {
+font-family:ATS-Bandipura-Bold;
+font-weight: 100;
+font-size: 42px;
+line-height: 1.4;
+letter-spacing: normal;	
+
+}

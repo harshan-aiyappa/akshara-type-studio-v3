@@ -1,0 +1,12 @@
+
+Install an HarfBuzz text shaping engine script:
+
+1. Open Adobe InDesign.
+
+2. Go to Window > Utilities > Scripts.
+
+3. In the Scripts panel, right click on User and choose Reveal in Finder (MacOS) or Reveal in Explorer (Windows).
+
+4. Copy the script file (eg. 'HarfBuzz.jsx') inside the Scripts Panel folder.
+
+5. And that's it! The script in now available in the Scripts panel > User. To activate or deactivate, just double click on the HarfBuzz.

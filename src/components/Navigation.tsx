@@ -78,7 +78,7 @@ const Navigation = ({ isDark, toggleDark }: NavProps) => {
                   onClick={() => handleNavigate(item.path)}
                   className="relative px-5 py-2.5 rounded-full text-[10px] font-black tracking-[0.25em] uppercase font-headline transition-all duration-300 group overflow-hidden"
                   style={{
-                    color: isActive ? "#fff" : "var(--text-muted)",
+                    color: isActive ? (isDark ? "#0A382F" : "#fff") : "var(--text-muted)",
                   }}
                 >
                   <span className="relative z-10">{item.name}</span>

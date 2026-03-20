@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Send, MapPin, Mail, ArrowUpRight } from "lucide-react";
+import { Send, MapPin, Mail, Phone, ArrowUpRight } from "lucide-react";
 
 const socials = [
   { name: "Instagram", url: "https://www.instagram.com/aksharatypestudio/" },
   { name: "X (Twitter)", url: "https://twitter.com/aksharatype" },
   { name: "Facebook", url: "https://www.facebook.com/aksharatypestudio" },
   { name: "Behance", url: "https://www.behance.net/aksharatypestudio" },
-  { name: "YouTube", url: "https://www.youtube.com/@aksharatypestudio" },
+  { name: "YouTube", url: "https://www.youtube.com/channel/UCOB7XHf00zmT0s7LkbqVM3Q" },
 ];
 
 export default function ContactPage() {
@@ -39,7 +39,23 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-widest text-[#3AB549] block mb-2 font-headline">Studio Location</span>
-                      <p className="text-xl font-bold text-[#0A382F] font-headline">Tirumakudalu Narasipura<br />Mysuru District, Karnataka, India</p>
+                      <p className="text-xl font-bold text-[#0A382F] font-headline">Tirumakudalu Narasipura</p>
+                      <p className="text-sm font-body text-[#0A382F]/60 mt-1 leading-relaxed">Near Court Compound, Nanjangud Road,<br />opp. to APMC, Mysuru Dist., Karnataka 571124.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-8 group">
+                    <div className="w-14 h-14 rounded-2xl bg-[#EAFDE7] flex items-center justify-center group-hover:bg-[#0A382F] group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[#3AB549] block mb-2 font-headline">Call or Message</span>
+                      <a
+                        href="tel:+919945382898"
+                        className="text-xl font-bold text-[#0A382F] font-headline hover:text-[#3AB549] transition-colors"
+                      >
+                        +91 99453 82898
+                      </a>
                     </div>
                   </div>
 
@@ -50,10 +66,10 @@ export default function ContactPage() {
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-widest text-[#3AB549] block mb-2 font-headline">Electronic Mail</span>
                       <a
-                        href="mailto:info@aksharatypestudio.in"
+                        href="mailto:connect.ats@outlook.com"
                         className="text-xl font-bold text-[#0A382F] font-headline hover:text-[#3AB549] transition-colors"
                       >
-                        info@aksharatypestudio.in
+                        connect.ats@outlook.com
                       </a>
                     </div>
                   </div>

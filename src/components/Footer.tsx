@@ -5,7 +5,7 @@ const socials = [
   { name: "X (Twitter)", url: "https://twitter.com/aksharatype" },
   { name: "Facebook", url: "https://www.facebook.com/aksharatypestudio" },
   { name: "Behance", url: "https://www.behance.net/aksharatypestudio" },
-  { name: "YouTube", url: "https://www.youtube.com/@aksharatypestudio" },
+  { name: "YouTube", url: "https://www.youtube.com/channel/UCOB7XHf00zmT0s7LkbqVM3Q" },
 ];
 
 const navLinks = [
@@ -33,11 +33,11 @@ export default function Footer() {
               An independent Kannada type foundry dedicated to the design and distribution of digital fonts in ಕನ್ನಡ (Kannada) and Latin script.
             </p>
             <a
-              href="mailto:info@aksharatypestudio.in"
+              href="mailto:connect.ats@outlook.com"
               className="text-xs font-bold transition-all hover:opacity-100"
               style={{ color: "rgba(58,181,73,0.6)" }}
             >
-              info@aksharatypestudio.in
+              connect.ats@outlook.com
             </a>
           </div>
 

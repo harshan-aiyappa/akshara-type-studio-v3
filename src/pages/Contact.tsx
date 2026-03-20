@@ -12,10 +12,10 @@ const socials = [
 export default function ContactPage() {
   return (
     <div className="bg-white text-[#0A382F] min-h-screen selection:bg-[#EAFDE7]">
-      <main className="pt-32">
-        <section className="py-24 md:py-40 px-8">
+      <main className="pt-24 sm:pt-32">
+        <section className="py-16 sm:py-24 md:py-40 px-5 sm:px-8 lg:px-12">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
               <div className="max-w-xl">
                 <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-4 mb-10">
                   <div className="h-[2px] w-12 bg-[#3AB549]" />
@@ -32,7 +32,7 @@ export default function ContactPage() {
                   <span className="italic font-light text-[#3AB549]/60 mix-blend-multiply">Dialogue.</span>
                 </motion.h1>
 
-                <div className="space-y-16 pt-16 border-t border-[#3AB549]/10">
+                <div className="space-y-10 sm:space-y-16 pt-10 sm:pt-16 border-t border-[#3AB549]/10">
                   <div className="flex gap-8 group">
                     <div className="w-14 h-14 rounded-2xl bg-[#EAFDE7] flex items-center justify-center group-hover:bg-[#0A382F] group-hover:text-white transition-all shadow-sm flex-shrink-0">
                       <MapPin className="w-6 h-6" />
@@ -64,14 +64,14 @@ export default function ContactPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
-                className="bg-[#f7fdf9] rounded-[4rem] p-12 md:p-20 border border-[#3AB549]/10 shadow-2xl shadow-[#0A382F]/5 relative overflow-hidden"
+                className="bg-[#f7fdf9] rounded-[2.5rem] sm:rounded-[3.5rem] md:rounded-[4rem] p-8 sm:p-12 md:p-20 border border-[#3AB549]/10 shadow-2xl shadow-[#0A382F]/5 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 p-10 opacity-[0.03] select-none pointer-events-none">
                   <Send className="w-64 h-64 text-[#0A382F]" />
                 </div>
 
                 <form className="relative z-10 space-y-12">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 md:gap-12">
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-widest text-[#0A382F]/40 font-headline ml-4">Your Name</label>
                       <input className="w-full bg-white border border-[#3AB549]/10 rounded-[1.5rem] px-8 py-5 text-sm font-body focus:ring-4 focus:ring-[#3AB549]/10 outline-none transition-all placeholder:text-[#0A382F]/20" placeholder="Manjunatha R." />
@@ -102,8 +102,8 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-20 border-t border-[#3AB549]/10 px-8">
-          <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-12 md:gap-24 font-headline">
+        <section className="py-16 sm:py-20 border-t border-[#3AB549]/10 px-5 sm:px-8 lg:px-12">
+          <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-20 font-headline">
             {socials.map((platform) => (
               <a
                 key={platform.name}

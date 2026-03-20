@@ -436,10 +436,10 @@ function OcrTool() {
 export default function ToolsPage() {
   return (
     <div className="min-h-screen" style={{ background: "var(--bg)", color: "var(--text-primary)" }}>
-      <main className="pt-32">
-        <section className="max-w-7xl mx-auto px-6 sm:px-8 py-16 pb-40">
+      <main className="pt-24 sm:pt-32">
+        <section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 pb-40">
           {/* Hero Header */}
-          <div className="mb-20 max-w-4xl">
+          <div className="mb-12 sm:mb-16 md:mb-20 max-w-4xl">
             <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-4 mb-6">
               <div className="h-[2px] w-10" style={{ background: "var(--brand)" }} />
               <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--brand)" }}>

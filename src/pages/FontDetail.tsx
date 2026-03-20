@@ -76,7 +76,7 @@ export default function FontDetailPage({ fontSlug, onBack }: Props) {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--bg)", color: "var(--text-primary)" }}>
-      <main className="pt-32 pb-24 max-w-7xl mx-auto px-6 lg:px-12">
+      <main className="pt-28 sm:pt-32 pb-24 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* Back Button */}
         <button
@@ -324,7 +324,7 @@ export default function FontDetailPage({ fontSlug, onBack }: Props) {
 
         {/* ─── Specs & Download ─── */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-20">
-          <div className="md:col-span-2 rounded-[3rem] p-12 md:p-16 border shadow-sm"
+          <div className="md:col-span-2 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] p-8 sm:p-12 md:p-16 border shadow-sm"
             style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
             <h3 className="text-2xl font-bold mb-10 flex items-center gap-3 font-headline" style={{ color: "var(--text-primary)" }}>
               <Terminal className="w-6 h-6" style={{ color: "var(--brand)" }} /> Technical Specifications
@@ -378,7 +378,7 @@ export default function FontDetailPage({ fontSlug, onBack }: Props) {
             </div>
           </div>
 
-          <div className="rounded-[3rem] p-12 md:p-16 text-white flex flex-col justify-between overflow-hidden relative group"
+          <div className="rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] p-8 sm:p-12 md:p-16 text-white flex flex-col justify-between overflow-hidden relative group"
             style={{ background: "var(--brand-dark)" }}>
             <div className="absolute -bottom-10 -right-10 text-[12rem] font-kannada text-white/5 group-hover:text-white/10 transition-colors duration-1000 select-none pointer-events-none">
               {font.char}

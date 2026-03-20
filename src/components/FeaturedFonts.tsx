@@ -12,11 +12,11 @@ const galleryFonts = [
 ];
 
 const cardConfig = [
-  { span: "md:col-span-2 md:row-span-2", dark: true,   accent: false },
-  { span: "md:col-span-1 md:row-span-1", dark: false,  accent: false },
-  { span: "md:col-span-1 md:row-span-1", dark: false,  accent: false },
-  { span: "md:col-span-2 md:row-span-1", dark: false,  accent: true  },
-  { span: "md:col-span-1 md:row-span-1", dark: false,  accent: false },
+  { span: "sm:col-span-2 lg:col-span-2 lg:row-span-2", dark: true,   accent: false },
+  { span: "lg:col-span-1 lg:row-span-1",               dark: false,  accent: false },
+  { span: "lg:col-span-1 lg:row-span-1",               dark: false,  accent: false },
+  { span: "sm:col-span-2 lg:col-span-2 lg:row-span-1", dark: false,  accent: true  },
+  { span: "lg:col-span-1 lg:row-span-1",               dark: false,  accent: false },
 ];
 
 interface FeaturedFontsProps {

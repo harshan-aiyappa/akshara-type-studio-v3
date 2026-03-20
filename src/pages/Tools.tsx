@@ -70,7 +70,7 @@ function TransliterationTool() {
 
   return (
     <div
-      className="lg:col-span-2 rounded-[2.5rem] md:rounded-[4rem] p-10 md:p-14 text-white relative overflow-hidden flex flex-col gap-8"
+      className="md:col-span-2 lg:col-span-2 rounded-[2.5rem] md:rounded-[4rem] p-10 md:p-14 text-white relative overflow-hidden flex flex-col gap-8"
       style={{ background: "var(--brand-dark)" }}
     >
       <div className="absolute top-0 right-0 p-6 md:p-10 opacity-[0.06] select-none pointer-events-none">
@@ -466,7 +466,7 @@ export default function ToolsPage() {
           </div>
 
           {/* Tools Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <TransliterationTool />
             <SpeechToTextTool />
             <OcrTool />

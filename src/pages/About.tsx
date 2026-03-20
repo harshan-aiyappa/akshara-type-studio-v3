@@ -67,7 +67,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── Narrative Grid ─── */}
-        <section className="py-16 sm:py-24 lg:py-40 px-5 sm:px-8">
+        <section className="py-16 sm:py-24 lg:py-40 px-5 sm:px-8 lg:px-12">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
             {/* Dark Hero Card */}
             <motion.div
@@ -125,7 +125,7 @@ export default function AboutPage() {
 
         {/* ─── Founder Narrative ─── */}
         <section className="py-16 sm:py-24 lg:py-40 overflow-hidden" style={{ background: "var(--bg-card)" }}>
-          <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
             {/* Portrait — shown below text on mobile */}
             <motion.div
               initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
@@ -175,7 +175,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── Values Grid ─── */}
-        <section className="py-16 sm:py-24 lg:py-40 px-5 sm:px-8">
+        <section className="py-16 sm:py-24 lg:py-40 px-5 sm:px-8 lg:px-12">
           <div className="max-w-7xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 sm:mb-20">
               <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.5em] font-headline block mb-4" style={{ color: "var(--brand)" }}>
@@ -210,7 +210,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── Stats ─── */}
-        <section className="py-16 sm:py-24 lg:py-40 px-5 sm:px-8" style={{ background: "var(--brand-dark)" }}>
+        <section className="py-16 sm:py-24 lg:py-40 px-5 sm:px-8 lg:px-12" style={{ background: "var(--brand-dark)" }}>
           <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 text-center">
             {stats.map((stat, i) => (
               <motion.div

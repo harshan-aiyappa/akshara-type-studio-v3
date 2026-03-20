@@ -19,7 +19,11 @@ const cardConfig = [
   { span: "md:col-span-1 md:row-span-1", dark: false,  accent: false },
 ];
 
-export default function FeaturedFonts() {
+interface FeaturedFontsProps {
+  onSelectFont?: (slug: string) => void;
+}
+
+export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
   return (
     <section className="py-24 md:py-40" style={{ background: "var(--bg)" }}>
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -73,7 +77,8 @@ export default function FeaturedFonts() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 whileHover={{ y: -8 }}
-                className={`${cfg.span} rounded-[2.5rem] sm:rounded-[3.5rem] p-8 sm:p-10 md:p-14 flex flex-col justify-between relative overflow-hidden cursor-pointer group transition-all duration-700`}
+                onClick={() => font.isReal && onSelectFont?.(font.slug)}
+                className={`${cfg.span} rounded-[2.5rem] sm:rounded-[3.5rem] p-8 sm:p-10 md:p-14 flex flex-col justify-between relative overflow-hidden group transition-all duration-700 ${font.isReal ? "cursor-pointer" : "cursor-default"}`}
                 style={{
                   background: cfg.accent
                     ? "var(--brand)"

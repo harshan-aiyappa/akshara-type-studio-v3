@@ -10,7 +10,7 @@ interface Props {
 
 export default function FontDetailPage({ fontSlug, onBack }: Props) {
   const font = getFontBySlug(fontSlug);
-  const [previewText, setPreviewText] = useState("ಕನ್ನಡ ಲಿಪಿ.");
+  const [previewText, setPreviewText] = useState(font?.previewText ?? "ಕನ್ನಡ ಲಿಪಿ.");
   const [fontSize, setFontSize] = useState(80);
   const [activeVariant, setActiveVariant] = useState<FontVariant | null>(
     font?.variants?.[0] ?? null
@@ -21,6 +21,7 @@ export default function FontDetailPage({ fontSlug, onBack }: Props) {
   useEffect(() => {
     if (font?.variants?.[0]) setActiveVariant(font.variants[0]);
     setShowcaseIndex(0);
+    setPreviewText(font?.previewText ?? "ಕನ್ನಡ ಲಿಪಿ.");
   }, [fontSlug, font]);
 
   useEffect(() => {
@@ -345,8 +346,20 @@ export default function FontDetailPage({ fontSlug, onBack }: Props) {
               </div>
               <div className="space-y-3">
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] font-headline" style={{ color: "var(--text-faint)" }}>Script</p>
-                <p className="text-xl font-bold font-headline" style={{ color: "var(--text-primary)" }}>Kannada</p>
+                <p className="text-xl font-bold font-headline" style={{ color: "var(--text-primary)" }}>Kannada + Latin</p>
               </div>
+              {font.designer && (
+                <div className="space-y-3">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] font-headline" style={{ color: "var(--text-faint)" }}>Designer</p>
+                  <p className="text-xl font-bold font-headline" style={{ color: "var(--text-primary)" }}>{font.designer}</p>
+                </div>
+              )}
+              {font.version && (
+                <div className="space-y-3">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] font-headline" style={{ color: "var(--text-faint)" }}>Version</p>
+                  <p className="text-xl font-bold font-headline" style={{ color: "var(--text-primary)" }}>{font.version}</p>
+                </div>
+              )}
               <div className="col-span-2 pt-6" style={{ borderTop: "1px solid var(--border)" }}>
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] mb-6 font-headline" style={{ color: "var(--text-faint)" }}>Features</p>
                 <div className="flex flex-wrap gap-3">

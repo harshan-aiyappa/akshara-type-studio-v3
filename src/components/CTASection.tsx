@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
-export default function CTASection() {
+interface CTAProps {
+  onNavigate: (path: string) => void;
+}
+
+export default function CTASection({ onNavigate }: CTAProps) {
   return (
     <section className="py-20 md:py-40" style={{ background: "var(--bg)" }}>
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
@@ -43,6 +47,7 @@ export default function CTASection() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
+                onClick={() => onNavigate("contact")}
                 className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 rounded-full text-sm font-bold uppercase tracking-widest font-headline text-white transition-all"
                 style={{ background: "var(--brand-dark)", boxShadow: "0 20px 50px -15px rgba(10,56,47,0.3)" }}
               >
@@ -51,10 +56,11 @@ export default function CTASection() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
+                onClick={() => onNavigate("fonts")}
                 className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 rounded-full text-sm font-bold uppercase tracking-widest font-headline transition-all"
                 style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
               >
-                Browse Licenses
+                Browse Fonts
               </motion.button>
             </div>
           </div>

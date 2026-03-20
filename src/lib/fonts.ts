@@ -29,6 +29,9 @@ export interface Font {
   variants?: FontVariant[];
   showcaseImages?: string[];
   downloadUrl?: string;
+  previewText?: string;
+  version?: string;
+  designer?: string;
 }
 
 export const fontData: Font[] = [
@@ -38,17 +41,17 @@ export const fontData: Font[] = [
     name: "Bandipura",
     nameKannada: "ಬಂಡೀಪುರ",
     char: "ಶ",
-    desc: "A bold display face inspired by the organic flora and fauna of Bandipur national park.",
-    longDesc: "ATSBandipura is a bold display typeface inspired by the organic and lush landscape of Bandipur national park. Its letterforms echo the wild flora of Karnataka's forests, rendered in a contemporary display style perfect for headlines, posters, and cultural branding.",
+    desc: "ATS Bandipura is an informal display typeface in Kannada and Latin script inspired by Elephant.",
+    longDesc: "ATS Bandipura is an informal display typeface in Kannada and Latin script inspired by Elephant. Its thick, organic letterforms echo the weight and presence of the gentle giant, crafted for bold headlines, posters, and cultural branding that demand immediate attention.",
     styles: 1,
     category: "Display",
     status: "Available",
     year: "2022",
     tag: "FREE",
     weights: [700],
-    features: ["OpenType", "Unicode 5.0", "Kannada Script"],
-    inspiration: "Bandipur National Park flora and Karnataka forest signage",
-    usage: ["Headlines", "Posters", "Heritage Branding", "Cultural Events"],
+    features: ["OpenType", "Unicode 5.0", "Kannada Script", "Latin Script"],
+    inspiration: "Elephant anatomy and the wildlife of Bandipur National Park, Karnataka",
+    usage: ["Headlines", "Posters", "Heritage Branding", "Cultural Events", "Signage"],
     isReal: true,
     primaryFamily: "ATSBandipura",
     variants: [
@@ -66,6 +69,9 @@ export const fontData: Font[] = [
       "/fonts/bandipura/showcase/ats-bandipura-09.webp",
     ],
     downloadUrl: "/fonts/bandipura/ATS-Bandipura.zip",
+    previewText: "ಮಣ್ಣಿನ ಮಡಿಕೆಯ ಘಮಲು",
+    version: "1.01",
+    designer: "Manjunatha R",
   },
   {
     id: 2,
@@ -73,17 +79,17 @@ export const fontData: Font[] = [
     name: "Bengaluru",
     nameKannada: "ಬೆಂಗಳೂರು",
     char: "ಬೆ",
-    desc: "A bitmap-inspired display family in 5 distinct styles — Dot, Pixel, Smooth, Square, and LED.",
-    longDesc: "ATSBengaluru is a bitmap-inspired display font family celebrating the visual language of Bengaluru's iconic LED signage, pixel displays, and digital hoardings. Available in 5 distinct sub-families — Dot, Pixel, Smooth, Square, and LED — each capturing a unique digital aesthetic while maintaining the spirit of the Kannada script.",
+    desc: "ATS Bengaluru is a Bitmap style font with a futuristic style, built on a clear geometric grid. Comes in 5 fonts and 2 styles, supporting Kannada and Latin.",
+    longDesc: "ATS Bengaluru is a Bitmap style font with a futuristic style. This font looks modern and simple and built on a clear geometric grid. The font will give any work a unique look and is perfectly suitable to use on LED boards, print, games, web-sites, e-books, mobile applications. ATS Bengaluru comes in 5 Fonts (Dot, Pixel, Smooth, Square, LED), 2 Styles (Regular & Bold) and supports Kannada and Latin languages.",
     styles: 10,
     category: "Display",
     status: "Available",
     year: "2022",
     tag: "POPULAR",
     weights: [400, 700],
-    features: ["OpenType", "Unicode 5.0", "Kannada Script", "5 Sub-Families"],
-    inspiration: "Bengaluru LED hoardings, MG Road digital signage, pixel displays",
-    usage: ["Digital Signage", "Branding", "Posters", "Titles", "UI"],
+    features: ["OpenType", "Unicode 5.0", "Kannada Script", "Latin Script", "5 Sub-Families", "Bitmap Style"],
+    inspiration: "Bengaluru LED hoardings, bus digital sign boards, MG Road pixel displays",
+    usage: ["LED Boards", "Digital Signage", "Branding", "Posters", "Games", "Web", "Mobile"],
     isReal: true,
     primaryFamily: "ATSBengaluru-Smooth",
     variants: [
@@ -113,6 +119,8 @@ export const fontData: Font[] = [
       "/fonts/bengaluru/showcase/ats-bengaluru-led-08.webp",
     ],
     downloadUrl: "/fonts/bengaluru/ATS-Bengaluru.zip",
+    previewText: "ಬೆಂಗಳೂರು",
+    designer: "Manjunatha R",
   },
   {
     id: 3,
@@ -120,16 +128,16 @@ export const fontData: Font[] = [
     name: "Chikkamagaluru",
     nameKannada: "ಚಿಕ್ಕಮಗಳೂರು",
     char: "ಚಿ",
-    desc: "A playful children's display font in 2 variants — Regular and Color — inspired by the hill district.",
-    longDesc: "ATSChikkamagaluru is a vibrant children's display typeface inspired by the lush coffee estates and misty hills of Chikkamagaluru. Available in Regular and Color variants, it brings warmth and playfulness to Kannada typography — perfect for children's media, educational materials, and joyful cultural design.",
+    desc: "ATS Chikkamagaluru is a handwritten typeface inspired from kids writing in their books. The first Kannada color font, available in Regular and Color.",
+    longDesc: "ATS Chikkamagaluru is a handwritten typeface inspired from kids writing character in their book. It is the first Kannada color font, capturing the charm and spontaneity of a child's handwriting. Available in 2 styles — Regular and Color — it brings warmth and playfulness to Kannada typography, perfect for children's media, educational materials, and joyful design.",
     styles: 2,
     category: "Display",
     status: "Available",
     year: "2024",
     tag: "NEW",
     weights: [400],
-    features: ["OpenType", "Unicode 5.0", "Kannada Script", "Color Font (COLRv1)"],
-    inspiration: "Chikkamagaluru coffee estate landscapes and Karnataka hill district culture",
+    features: ["OpenType", "Unicode 5.0", "Kannada Script", "Color Font (COLRv1)", "Handwritten Style"],
+    inspiration: "Kids handwriting style and children's notebook characters",
     usage: ["Children's Media", "Educational", "Cultural Events", "Packaging", "Branding"],
     isReal: true,
     primaryFamily: "ATSChikkamagaluru",
@@ -146,6 +154,8 @@ export const fontData: Font[] = [
       "/fonts/chikkamagaluru/showcase/ats-chikkamagaluru-06.webp",
     ],
     downloadUrl: "/fonts/chikkamagaluru/ATS-Chikkamagaluru.zip",
+    previewText: "ಚಿಕ್ಕಮಗಳೂರು",
+    designer: "Manjunatha R",
   },
   {
     id: 4,

@@ -9,9 +9,9 @@ export default function AboutPage() {
   const yParallax = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
   const stats = [
-    { label: "Fonts Released",  val: "16+" },
-    { label: "Design Awards",   val: "04"  },
-    { label: "States Reached",  val: "08"  },
+    { label: "Fonts Released",  val: "3+"  },
+    { label: "State Awards",    val: "02"  },
+    { label: "Est.",            val: "2021" },
     { label: "Years Heritage",  val: "2k"  },
   ];
 
@@ -107,9 +107,16 @@ export default function AboutPage() {
                 <h3 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6 font-headline tracking-tight" style={{ color: "var(--text-primary)" }}>
                   Rajyotsava Honors
                 </h3>
-                <p className="text-base sm:text-lg font-light leading-relaxed font-body mb-8" style={{ color: "var(--text-muted)" }}>
-                  Official recognition by the State for exceptional contribution to digital script preservation.
-                </p>
+                <div className="flex flex-col gap-5 mb-8">
+                  <div>
+                    <p className="text-sm font-bold font-headline" style={{ color: "var(--text-primary)" }}>Taluk Kannada Rajyotsava Prashasti · 2022</p>
+                    <p className="text-xs font-light font-body mt-1" style={{ color: "var(--text-muted)" }}>Govt. of Karnataka · T Narasipura Taluku, Mysuru District</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold font-headline" style={{ color: "var(--text-primary)" }}>District Kannada Rajyotsava Prashasti · 2023</p>
+                    <p className="text-xs font-light font-body mt-1" style={{ color: "var(--text-muted)" }}>Govt. of Karnataka · Zilla Adalitha, Mysuru</p>
+                  </div>
+                </div>
                 <div className="h-[1px] w-20" style={{ background: "var(--brand)", opacity: 0.3 }} />
               </div>
             </motion.div>
@@ -147,16 +154,16 @@ export default function AboutPage() {
                 </h2>
                 <div className="flex flex-col gap-6 sm:gap-8">
                   <p className="text-lg sm:text-2xl font-light leading-relaxed font-body italic" style={{ color: "var(--text-primary)" }}>
-                    "Typography is the voice of the written word. In the case of Kannada, that voice is a melody playing for two millennia."
+                    "I began drawing Kannada letters when I was ten years old, and I continue to be fascinated with Painting and Letter Design."
                   </p>
                   <p className="text-sm sm:text-lg font-light leading-relaxed font-body" style={{ color: "var(--text-muted)" }}>
-                    Lead designer and custodian of Akshara's technical vision. His work focuses on epigraphy and digital multi-script orchestration.
+                    Born and raised in Tirumakudalu Narasipura, Mysuru, Karnataka. Type Designer, Conceptual Photographer, and Graphic Designer. That passion led him to digital Typeface Design and the founding of Akshara Type Studio in 2021.
                   </p>
                 </div>
               </motion.div>
 
               <div className="grid grid-cols-2 gap-6 sm:gap-12 pt-10 sm:pt-16" style={{ borderTop: "1px solid var(--border)" }}>
-                {[{ label: "Philosophy", val: "Movement First" }, { label: "Legacy", val: "Epigraphic Truth" }].map(({ label, val }) => (
+                {[{ label: "Founded", val: "2021" }, { label: "Location", val: "T. Narasipura, Mysuru" }].map(({ label, val }) => (
                   <div key={label} className="space-y-3 font-headline">
                     <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest block" style={{ color: "var(--brand)" }}>{label}</span>
                     <span className="text-lg sm:text-xl font-bold" style={{ color: "var(--text-primary)" }}>{val}</span>

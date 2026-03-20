@@ -45,7 +45,12 @@ A modern web application for a typography studio specializing in Kannada fonts a
 - Dark/light mode via custom hook
 - Smooth scrolling with Lenis
 - Font archive with 13 fonts (3 available, 10 in development)
-- Font detail pages with: showcase image gallery, type tester, variant selector, waterfall, download
+- Font detail pages with: showcase image gallery, type tester (font-specific default preview text), variant selector, character waterfall, technical specs (designer, version), download
+- FeaturedFonts bento grid — real fonts clickable and navigate to detail page
+- Hero + CTA section buttons wired to navigate to Fonts and About pages
+- Footer and Contact page updated with real social URLs (Instagram, Twitter, Facebook, Behance, YouTube) and real email (info@aksharatypestudio.in)
+- Contact page shows real studio address: Tirumakudalu Narasipura, Mysuru District, Karnataka
+- About page: accurate stats (3+ fonts, 2 state awards: Taluk 2022 + District 2023), real Manjunatha bio, real award details
 - **English → Kannada Transliteration**: Google's transliteration API via `/tools/ats-eng-to-kan.js`
 - **Speech to Text**: Web Speech API (webkitSpeechRecognition) with Kannada (`kn-IN`) + punctuation keywords
 - **Image to Text (OCR)**: Tesseract.js with Kannada + English language data

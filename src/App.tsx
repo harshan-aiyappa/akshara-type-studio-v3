@@ -66,11 +66,11 @@ export default function App() {
       default:
         return (
           <div key="home">
-            <HeroSection />
-            <FeaturedFonts />
+            <HeroSection onNavigate={navigateTo} />
+            <FeaturedFonts onSelectFont={handleSelectFont} />
             <HeritageSection />
             <StudioLife />
-            <CTASection />
+            <CTASection onNavigate={navigateTo} />
           </div>
         );
     }

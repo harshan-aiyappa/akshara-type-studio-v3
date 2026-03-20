@@ -1,7 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function HeroSection() {
+interface HeroProps {
+  onNavigate: (path: string) => void;
+}
+
+export default function HeroSection({ onNavigate }: HeroProps) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -84,6 +88,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.04, y: -4 }}
               whileTap={{ scale: 0.96 }}
+              onClick={() => onNavigate("fonts")}
               className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 rounded-2xl text-xs sm:text-sm font-bold tracking-[0.2em] uppercase font-headline text-white flex items-center justify-center gap-4 group transition-all"
               style={{ background: "var(--brand-dark)", boxShadow: "0 20px 50px -15px rgba(10,56,47,0.35)" }}
             >
@@ -93,6 +98,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.04, y: -4 }}
               whileTap={{ scale: 0.96 }}
+              onClick={() => onNavigate("about")}
               className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 rounded-2xl text-xs sm:text-sm font-bold tracking-[0.2em] uppercase font-headline transition-all"
               style={{ background: "var(--bg-card)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
             >

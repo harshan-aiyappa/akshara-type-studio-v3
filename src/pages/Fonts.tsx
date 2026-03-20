@@ -13,7 +13,7 @@ const categories: { icon: React.ElementType; label: FontCategory | "All" }[] = [
   { icon: Zap,      label: "Variable"    },
 ];
 
-export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }) {
+export default function FontsPage({ onSelectFont }: { onSelectFont: (slug: string) => void }) {
   const [activeCategory, setActiveCategory] = useState<FontCategory | "All">("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"name" | "year" | "styles">("name");
@@ -46,7 +46,6 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
           <h2 className="text-xl font-black font-headline tracking-tighter mb-6" style={{ color: "var(--text-primary)" }}>
             Filter Specimen
           </h2>
-          {/* Search */}
           <div className="relative group mb-6">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 transition-colors" style={{ color: "var(--text-faint)" }} />
             <input
@@ -62,7 +61,6 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
               }}
             />
           </div>
-          {/* Sort */}
           <div className="mb-8">
             <p className="text-[9px] font-black uppercase tracking-[0.5em] mb-3 font-headline" style={{ color: "var(--text-faint)" }}>Sort By</p>
             <div className="flex gap-2 flex-wrap">
@@ -108,18 +106,19 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
           ))}
         </nav>
         <div className="px-8 pb-10 pt-6" style={{ borderTop: "1px solid var(--border)" }}>
-          <button
-            className="w-full py-5 rounded-2xl text-xs font-bold uppercase tracking-widest font-headline transition-all text-white"
+          <a
+            href="#contact"
+            onClick={e => { e.preventDefault(); window.location.hash = "contact"; window.scrollTo({ top: 0, behavior: "instant" }); }}
+            className="w-full py-5 rounded-2xl text-xs font-bold uppercase tracking-widest font-headline transition-all text-white flex items-center justify-center"
             style={{ background: "var(--brand-dark)" }}
           >
             Commission Custom Type
-          </button>
+          </a>
         </div>
       </aside>
 
       {/* ─── Main Content ─── */}
       <section className="flex-1 lg:ml-72 xl:ml-80 px-5 sm:px-8 lg:px-14 py-16 pt-28 sm:pt-32">
-        {/* Page Header */}
         <div className="mb-16 sm:mb-20 max-w-4xl">
           <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-4 mb-6">
             <div className="h-[2px] w-10" style={{ background: "var(--brand)" }} />
@@ -139,7 +138,7 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
             className="text-base sm:text-lg font-light max-w-2xl font-body leading-relaxed" style={{ color: "var(--text-muted)" }}
           >
-            {fontData.length} curated Kannada typefaces — from 4th-century stone-carved heritage serifs to modern variable fonts for the digital web.
+            {fontData.filter(f => f.isReal).length} available Kannada typefaces — with more designs in development for the digital age.
           </motion.p>
         </div>
 
@@ -170,16 +169,16 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
-              onClick={onSelectFont}
-              className="group relative rounded-[2.5rem] sm:rounded-[3.5rem] p-8 sm:p-10 lg:p-14 transition-all duration-700 cursor-pointer overflow-hidden"
+              onClick={() => font.isReal && onSelectFont(font.slug)}
+              className={`group relative rounded-[2.5rem] sm:rounded-[3.5rem] p-8 sm:p-10 lg:p-14 transition-all duration-700 overflow-hidden ${font.isReal ? "cursor-pointer" : "cursor-default opacity-70"}`}
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--border)",
               }}
             >
-              {/* Active left-bar accent */}
+              {/* Left-bar accent */}
               <div
-                className="absolute top-0 left-0 w-1.5 h-0 group-hover:h-full transition-all duration-700 ease-out rounded-full"
+                className={`absolute top-0 left-0 w-1.5 h-0 ${font.isReal ? "group-hover:h-full" : ""} transition-all duration-700 ease-out rounded-full`}
                 style={{ background: "var(--brand)" }}
               />
 
@@ -187,20 +186,23 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
               <div className="flex justify-between items-start mb-10 sm:mb-14 relative z-10">
                 <div className="flex flex-col gap-2">
                   <h3
-                    className="font-black tracking-tighter font-headline group-hover:text-[#3AB549] transition-colors"
+                    className={`font-black tracking-tighter font-headline ${font.isReal ? "group-hover:text-[#3AB549]" : ""} transition-colors`}
                     style={{ fontSize: "clamp(1.4rem,4vw,2.2rem)", color: "var(--text-primary)", lineHeight: 1 }}
                   >
                     {font.name}
                   </h3>
                   <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] font-headline" style={{ color: "var(--text-faint)" }}>
-                    {typeof font.styles === "number" ? `${font.styles} Weights` : font.styles} · {font.category}
+                    {typeof font.styles === "number" ? `${font.styles} Style${font.styles !== 1 ? "s" : ""}` : font.styles} · {font.category}
                   </span>
                 </div>
                 <div className="flex flex-col items-end gap-2">
                   {font.tag && (
                     <span
                       className="px-3 py-1.5 rounded-full text-[8px] sm:text-[9px] font-black tracking-widest uppercase font-headline"
-                      style={{ background: "var(--brand-dark)", color: "var(--bg)" }}
+                      style={{
+                        background: font.isReal ? "var(--brand)" : "var(--brand-dark)",
+                        color: "#fff",
+                      }}
                     >
                       {font.tag}
                     </span>
@@ -209,17 +211,29 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
                 </div>
               </div>
 
-              {/* Large Glyph */}
-              <div
-                className="font-kannada font-black leading-none mb-10 sm:mb-14 transition-all duration-1000 ease-out group-hover:scale-[1.04] group-hover:-rotate-2 origin-left"
-                style={{
-                  fontSize: "clamp(7rem,18vw,13rem)",
-                  color: "var(--text-primary)",
-                  opacity: 0.85,
-                }}
-              >
-                {font.char}
-              </div>
+              {/* Showcase image (real fonts) or Kannada char (mock) */}
+              {font.isReal && font.showcaseImages?.[0] ? (
+                <div className="rounded-2xl overflow-hidden mb-10 sm:mb-14 transition-all duration-1000 ease-out group-hover:scale-[1.02] origin-center"
+                  style={{ aspectRatio: "16/7" }}>
+                  <img
+                    src={font.showcaseImages[0]}
+                    alt={`${font.name} showcase`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="font-kannada font-black leading-none mb-10 sm:mb-14 transition-all duration-1000 ease-out group-hover:scale-[1.04] group-hover:-rotate-2 origin-left"
+                  style={{
+                    fontSize: "clamp(7rem,18vw,13rem)",
+                    color: "var(--text-primary)",
+                    opacity: 0.85,
+                  }}
+                >
+                  {font.char}
+                </div>
+              )}
 
               {/* Bottom row */}
               <div
@@ -239,16 +253,23 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
                     ))}
                   </div>
                 </div>
-                <div
-                  className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110"
-                  style={{
-                    border: "1px solid var(--border)",
-                    background: "var(--bg)",
-                    color: "var(--text-primary)",
-                  }}
-                >
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
-                </div>
+                {font.isReal ? (
+                  <div
+                    className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-[#3AB549]"
+                    style={{
+                      border: "1px solid var(--border)",
+                      background: "var(--bg)",
+                      color: "var(--text-primary)",
+                    }}
+                  >
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform group-hover:text-white" />
+                  </div>
+                ) : (
+                  <span className="text-[9px] font-black uppercase tracking-widest font-headline px-4 py-2 rounded-full"
+                    style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--text-faint)" }}>
+                    In Progress
+                  </span>
+                )}
               </div>
             </motion.div>
           ))}
@@ -264,16 +285,16 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
             <div className="absolute top-0 right-0 p-10 opacity-[0.03] select-none pointer-events-none group-hover:opacity-[0.06] transition-opacity duration-1000">
               <span className="font-kannada" style={{ fontSize: "clamp(15rem,30vw,35rem)" }}>ಅ</span>
             </div>
-            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.5em] mb-6 font-headline" style={{ color: "#3AB549" }}>Variable Archive</span>
+            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.5em] mb-6 font-headline" style={{ color: "#3AB549" }}>Free to Download</span>
             <h2 className="font-black tracking-tighter leading-[0.85] mb-8 font-headline" style={{ fontSize: "clamp(2rem,7vw,6rem)" }}>
-              The Evolution of <br /><span className="italic font-light opacity-40">Kannada Script.</span>
+              Kannada Typography <br /><span className="italic font-light opacity-40">for everyone.</span>
             </h2>
             <p className="text-white/40 max-w-xl mb-10 font-light leading-relaxed font-body text-sm sm:text-base">
-              Infinite weights in a single file. Heritage reimagined for fluid screens.
+              All ATS fonts are freely available for personal and commercial use. Download the full family ZIP and start creating.
             </p>
-            <div className="flex items-center gap-5 cursor-pointer group/btn">
+            <div className="flex items-center gap-5 cursor-pointer group/btn" onClick={() => onSelectFont("bandipura")}>
               <div className="w-12 h-[2px] group-hover/btn:w-20 transition-all duration-500" style={{ background: "#3AB549" }}></div>
-              <span className="font-bold text-[10px] uppercase tracking-[0.3em] font-headline" style={{ color: "#3AB549" }}>Explore Variable Tech</span>
+              <span className="font-bold text-[10px] uppercase tracking-[0.3em] font-headline" style={{ color: "#3AB549" }}>Explore Typefaces</span>
             </div>
           </motion.div>
           <motion.div
@@ -288,16 +309,17 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: () => void }
               <History className="text-[#3AB549] w-7 h-7 sm:w-10 sm:h-10" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6 font-headline tracking-tight" style={{ color: "var(--text-primary)" }}>
-              Palm-Leaf Records
+              Type Lab Tools
             </h3>
             <p className="text-sm font-light leading-relaxed mb-auto font-body" style={{ color: "var(--text-muted)" }}>
-              Access our scanned manuscripts that serve as the blueprint for our digital foundry.
+              Use our free tools — transliterate English to Kannada, transcribe speech, or extract text from images.
             </p>
             <button
               className="mt-10 sm:mt-16 py-5 font-bold rounded-2xl hover:opacity-90 transition-all text-xs uppercase tracking-widest font-headline"
               style={{ border: "2px solid var(--text-primary)", color: "var(--text-primary)" }}
+              onClick={() => { window.location.hash = "tools"; window.scrollTo({ top: 0, behavior: "instant" }); }}
             >
-              Browse Archive
+              Open Type Lab
             </button>
           </motion.div>
         </div>

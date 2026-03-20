@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { fontData } from "../lib/fonts";
 
-// Pick the featured gallery set
+// Pick the featured gallery set — real available fonts first
 const galleryFonts = [
-  fontData.find(f => f.id === 5)!,  // Kadamba Display — dark hero
-  fontData.find(f => f.id === 6)!,  // Sahitya Serif
-  fontData.find(f => f.id === 3)!,  // Bengaluru Sans
-  fontData.find(f => f.id === 11)!, // Tunga Variable — accent
-  fontData.find(f => f.id === 4)!,  // Bandipura Script
+  fontData.find(f => f.id === 2)!,  // Bengaluru — dark hero
+  fontData.find(f => f.id === 1)!,  // Bandipura
+  fontData.find(f => f.id === 3)!,  // Chikkamagaluru
+  fontData.find(f => f.id === 10)!, // Tunga Variable — accent
+  fontData.find(f => f.id === 4)!,  // Kadamba Display
 ];
 
 const cardConfig = [

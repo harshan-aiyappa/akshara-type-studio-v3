@@ -15,17 +15,19 @@ import ToolsPage from "./pages/Tools";
 import FontDetailPage from "./pages/FontDetail";
 import ContactPage from "./pages/Contact";
 
-// Page transition config — using animate/initial/exit directly to avoid Variants type issues
-
-
 export default function App() {
   const [currentPath, setCurrentPath] = useState("home");
+  const [selectedFontSlug, setSelectedFontSlug] = useState<string>("bandipura");
   const { isDark, toggleDark } = useTheme();
 
-  // Hash-based routing
   useEffect(() => {
     const handleHashChange = () => {
-      const path = window.location.hash.replace("#", "") || "home";
+      const hash = window.location.hash.replace("#", "") || "home";
+      const parts = hash.split("/");
+      const path = parts[0];
+      if (path === "detail" && parts[1]) {
+        setSelectedFontSlug(parts[1]);
+      }
       setCurrentPath(path);
     };
     window.addEventListener("hashchange", handleHashChange);
@@ -38,16 +40,27 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "instant" });
   };
 
+  const handleSelectFont = (slug: string) => {
+    setSelectedFontSlug(slug);
+    navigateTo(`detail/${slug}`);
+  };
+
   const renderPage = () => {
     switch (currentPath) {
       case "fonts":
-        return <FontsPage key="fonts" onSelectFont={() => navigateTo("detail")} />;
+        return <FontsPage key="fonts" onSelectFont={handleSelectFont} />;
       case "about":
         return <AboutPage key="about" />;
       case "tools":
         return <ToolsPage key="tools" />;
       case "detail":
-        return <FontDetailPage key="detail" onBack={() => navigateTo("fonts")} />;
+        return (
+          <FontDetailPage
+            key={`detail-${selectedFontSlug}`}
+            fontSlug={selectedFontSlug}
+            onBack={() => navigateTo("fonts")}
+          />
+        );
       case "contact":
         return <ContactPage key="contact" />;
       default:
@@ -73,7 +86,6 @@ export default function App() {
           toggleDark={toggleDark}
         />
 
-        {/* Animated Page Wrapper */}
         <AnimatePresence mode="wait">
           <motion.main
             key={currentPath}

@@ -105,6 +105,125 @@
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
+/* ========================
+   ATS FONT FACES — Bandipura
+   ======================== */
+@font-face {
+  font-family: "ATSBandipura";
+  src: url("/fonts/bandipura/woff2/ATSBandipura-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
+   ATS FONT FACES — Bengaluru Dot
+   ======================== */
+@font-face {
+  font-family: "ATSBengaluru-Dot";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-DotRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ATSBengaluru-Dot";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-DotBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
+   ATS FONT FACES — Bengaluru LED
+   ======================== */
+@font-face {
+  font-family: "ATSBengaluru-LED";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-LEDRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ATSBengaluru-LED";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-LEDBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
+   ATS FONT FACES — Bengaluru Pixel
+   ======================== */
+@font-face {
+  font-family: "ATSBengaluru-Pixel";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-PixelRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ATSBengaluru-Pixel";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-PixelBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
+   ATS FONT FACES — Bengaluru Smooth
+   ======================== */
+@font-face {
+  font-family: "ATSBengaluru-Smooth";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-SmoothRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ATSBengaluru-Smooth";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-SmoothBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
+   ATS FONT FACES — Bengaluru Square
+   ======================== */
+@font-face {
+  font-family: "ATSBengaluru-Square";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-SquareRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ATSBengaluru-Square";
+  src: url("/fonts/bengaluru/woff2/ATSBengaluru-SquareBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
+   ATS FONT FACES — Chikkamagaluru
+   ======================== */
+@font-face {
+  font-family: "ATSChikkamagaluru";
+  src: url("/fonts/chikkamagaluru/woff2/ATSChikkamagaluru-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ATSChikkamagaluru-Color";
+  src: url("/fonts/chikkamagaluru/woff2/ATSChikkamagaluru-ColorRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Animations */
 @keyframes fluid-float {
   0%, 100% { transform: translateY(0); }

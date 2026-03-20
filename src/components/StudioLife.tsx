@@ -47,7 +47,7 @@ export default function StudioLife() {
                 <Zap className="text-white w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <h4 className="text-white font-black font-headline tracking-tighter" style={{ fontSize: "clamp(1.5rem,4vw,2.5rem)" }}>The Living Script</h4>
-              <p className="text-white/60 mt-3 text-sm sm:text-base font-light font-body">Hand-refining each curve for the retinal digital age.</p>
+              <p className="text-white/80 mt-3 text-sm sm:text-base font-light font-body">Hand-refining each curve for the retinal digital age.</p>
             </div>
           </motion.div>
 
@@ -85,7 +85,7 @@ export default function StudioLife() {
             </div>
             <div>
               <h4 className="text-white text-xl sm:text-2xl font-black font-headline tracking-tighter mb-1">Field Trip</h4>
-              <p className="text-white/30 text-[10px] font-bold uppercase tracking-widest font-headline">Badami Inscriptions</p>
+              <p className="text-white/50 text-[10px] font-black uppercase tracking-widest font-headline">Badami Inscriptions</p>
             </div>
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"
               style={{ background: "radial-gradient(circle at center, rgba(58,181,73,0.08) 0%, transparent 70%)" }} />

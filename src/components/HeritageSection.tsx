@@ -68,7 +68,7 @@ export default function HeritageSection() {
                 style={{ fontSize: "clamp(2.5rem,8vw,7rem)", color: "var(--text-primary)" }}
               >
                 Heritage in <br />
-                <span className="italic font-light" style={{ color: "var(--brand)", opacity: 0.6 }}>Every Pixel.</span>
+                <span className="italic font-light premium-gradient-text">Every Pixel.</span>
               </h2>
               <p className="text-base sm:text-xl leading-relaxed font-light font-body max-w-lg" style={{ color: "var(--text-muted)" }}>
                 Our studio bridges the gap between ancient stone inscriptions and modern mobile screens. Every glyph is hand-refined to ensure the rhythmic balance of Kannada remains intact.

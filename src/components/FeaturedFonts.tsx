@@ -57,7 +57,8 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="hidden sm:flex items-center gap-3 text-[10px] sm:text-xs font-black uppercase tracking-widest font-headline transition-all"
+            onClick={() => onSelectFont?.("")} // Special case to go to fonts list
+            className="hidden sm:flex items-center gap-3 text-[10px] sm:text-xs font-black uppercase tracking-widest font-headline transition-all group"
             style={{ color: "var(--text-muted)" }}
           >
             View Full Archive
@@ -109,10 +110,10 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
                   <div className="flex flex-col gap-2">
                     {font.tag && (
                       <span
-                        className="inline-block px-3 py-1 rounded-full text-[8px] sm:text-[9px] font-black tracking-widest uppercase font-headline w-max"
+                        className="pill-badge w-max"
                         style={{
                           background: cfg.accent || cfg.dark ? "rgba(255,255,255,0.15)" : "var(--bg)",
-                          color: cfg.accent ? "#fff" : cfg.dark ? "#3AB549" : "var(--brand)",
+                          color: cfg.accent ? "#fff" : cfg.dark ? "var(--brand)" : "var(--brand)",
                           border: `1px solid ${cfg.accent || cfg.dark ? "rgba(255,255,255,0.2)" : "var(--border)"}`,
                         }}
                       >
@@ -121,7 +122,7 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
                     )}
                     <span
                       className="text-[9px] sm:text-[10px] font-black tracking-[0.35em] uppercase font-headline"
-                      style={{ color: cfg.dark || cfg.accent ? "rgba(255,255,255,0.3)" : "var(--text-faint)" }}
+                      style={{ color: cfg.dark || cfg.accent ? "rgba(255,255,255,0.5)" : "var(--text-faint)" }}
                     >
                       {font.category} · {font.year}
                     </span>
@@ -155,7 +156,7 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
                   <p
                     className="text-xs sm:text-sm font-light leading-relaxed font-body"
                     style={{
-                      color: cfg.dark || cfg.accent ? "rgba(255,255,255,0.42)" : "var(--text-muted)",
+                      color: cfg.dark || cfg.accent ? "rgba(255,255,255,0.7)" : "var(--text-muted)",
                       maxWidth: "26ch",
                     }}
                   >
@@ -167,7 +168,7 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
                   >
                     <span
                       className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest font-headline"
-                      style={{ color: cfg.dark || cfg.accent ? "rgba(255,255,255,0.3)" : "var(--text-faint)" }}
+                      style={{ color: cfg.dark || cfg.accent ? "rgba(255,255,255,0.5)" : "var(--text-faint)" }}
                     >
                       {typeof font.styles === "number" ? `${font.styles} Weights` : font.styles}
                     </span>
@@ -187,6 +188,7 @@ export default function FeaturedFonts({ onSelectFont }: FeaturedFontsProps) {
         {/* Mobile CTA */}
         <div className="mt-10 flex justify-center sm:hidden">
           <button
+            onClick={() => onSelectFont?.("")}
             className="flex items-center gap-3 px-7 py-4 rounded-full text-xs font-bold uppercase tracking-widest font-headline"
             style={{ background: "var(--bg-card)", color: "var(--text-primary)", border: "1px solid var(--border)" }}
           >

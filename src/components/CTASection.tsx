@@ -24,8 +24,8 @@ export default function CTASection({ onNavigate }: CTAProps) {
           <div className="relative z-10">
             <div className="flex justify-center mb-6 sm:mb-8">
               <span
-                className="px-5 py-2 rounded-full text-[9px] sm:text-[10px] font-black tracking-[0.4em] uppercase font-headline"
-                style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--brand)" }}
+                className="pill-badge"
+                style={{ background: "var(--bg)", color: "var(--brand)" }}
               >
                 Commission Your Script
               </span>
@@ -36,7 +36,7 @@ export default function CTASection({ onNavigate }: CTAProps) {
               style={{ fontSize: "clamp(2rem,7vw,4rem)", color: "var(--text-primary)" }}
             >
               Ready to define your <br />
-              <span className="italic font-light" style={{ color: "var(--text-muted)" }}>brand's voice?</span>
+              <span className="italic font-light premium-gradient-text">brand's voice?</span>
             </h2>
 
             <p className="text-sm sm:text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 sm:mb-12 font-body" style={{ color: "var(--text-muted)" }}>

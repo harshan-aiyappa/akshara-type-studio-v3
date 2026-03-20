@@ -1,29 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect, memo } from "react";
 import { ShoppingBag, Menu, Search, X, Sun, Moon, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import aksharaLogo from "../assets/akshara-logo.png";
 
 interface NavProps {
-  onNavigate: (path: string) => void;
-  currentPath: string;
   isDark: boolean;
   toggleDark: () => void;
 }
 
-export default function Navigation({ onNavigate, currentPath, isDark, toggleDark }: NavProps) {
+const Navigation = ({ isDark, toggleDark }: NavProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname.substring(1) || "home";
 
   const navItems = [
-    { name: "Home",    path: "home"    },
+    { name: "Home",    path: ""        },
     { name: "Fonts",   path: "fonts"   },
     { name: "Tools",   path: "tools"   },
     { name: "About",   path: "about"   },
     { name: "Contact", path: "contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleNavigate = (path: string) => {
-    onNavigate(path);
+    navigate(`/${path}`);
     setIsMobileMenuOpen(false);
   };
 
@@ -31,71 +41,69 @@ export default function Navigation({ onNavigate, currentPath, isDark, toggleDark
     <>
       {/* ─── Main Nav Bar ─── */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-500"
-        style={{ background: "var(--nav-bg)", borderBottom: "1px solid var(--nav-border)", backdropFilter: "blur(24px)", WebkitBackdropFilter: "blur(24px)" }}
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 transition-all duration-500 ${isScrolled ? "py-3 shadow-xl" : "py-5"}`}
+        style={{ 
+          background: isScrolled ? "var(--nav-bg)" : "transparent", 
+          borderBottom: isScrolled ? "1px solid var(--nav-border)" : "1px solid transparent", 
+          backdropFilter: isScrolled ? "blur(24px)" : "none", 
+          WebkitBackdropFilter: isScrolled ? "blur(24px)" : "none" 
+        }}
       >
         {/* Logo */}
-        <motion.div
-          onClick={() => handleNavigate("home")}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.97 }}
-          className="flex items-center gap-3 cursor-pointer select-none group"
+        <div
+          onClick={() => handleNavigate("")}
+          className="flex items-center gap-3 cursor-pointer select-none"
         >
           <img
               src={aksharaLogo}
               alt="Akshara Type Studio"
-              className="h-9 md:h-11 w-auto group-hover:rotate-[5deg] transition-transform duration-500"
+              className="h-9 md:h-11 w-auto"
+              fetchPriority="high"
             />
-        </motion.div>
+        </div>
 
         {/* Desktop Nav Links — Floating pill */}
-        <div className="hidden md:flex items-center">
+        <div className="max-md:hidden flex items-center">
           <div
-            className="flex items-center gap-1 px-2 py-2 rounded-full"
-            style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+            className="flex items-center gap-1 px-1.5 py-1.5 rounded-full"
+            style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "0 4px 12px -2px rgba(0,0,0,0.05)" }}
           >
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavigate(item.path)}
-                className="relative px-5 py-2 rounded-full text-[11px] font-black tracking-[0.3em] uppercase font-headline transition-all duration-300"
-                style={{
-                  background: currentPath === item.path ? "var(--brand-dark)" : "transparent",
-                  color: currentPath === item.path ? "var(--bg)" : "var(--text-muted)",
-                }}
-              >
-                {item.name}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              const isActive = (item.path === "" && currentPath === "home") || 
+                               currentPath === item.path || 
+                               (item.path === "fonts" && currentPath.startsWith("detail"));
+              return (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavigate(item.path)}
+                  className="relative px-5 py-2.5 rounded-full text-[10px] font-black tracking-[0.25em] uppercase font-headline transition-all duration-300 group overflow-hidden"
+                  style={{
+                    color: isActive ? "#fff" : "var(--text-muted)",
+                  }}
+                >
+                  <span className="relative z-10">{item.name}</span>
+                  {isActive && (
+                    <motion.div
+                      layoutId="active-pill"
+                      className="absolute inset-0"
+                      style={{ background: "var(--brand-dark)", borderRadius: "9999px" }}
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                  {!isActive && (
+                    <div className="absolute inset-0 bg-brand/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
 
         {/* Right Controls */}
         <div className="flex items-center gap-2 md:gap-3">
-          {/* Search */}
-          <AnimatePresence>
-            {isSearchOpen && (
-              <motion.div
-                initial={{ width: 0, opacity: 0 }}
-                animate={{ width: 220, opacity: 1 }}
-                exit={{ width: 0, opacity: 0 }}
-                className="relative hidden lg:block overflow-hidden"
-              >
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--text-faint)" }} />
-                <input
-                  autoFocus
-                  className="w-full pl-11 pr-4 py-3 rounded-2xl text-xs font-body outline-none transition-all"
-                  style={{ background: "var(--bg-card)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
-                  placeholder="Search foundry..."
-                  onBlur={() => setIsSearchOpen(false)}
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
-
           <button
             onClick={() => setIsSearchOpen(!isSearchOpen)}
-            className="w-10 h-10 flex items-center justify-center rounded-2xl transition-all duration-300 hidden lg:flex"
+            className="w-10 h-10 flex items-center justify-center rounded-2xl transition-all duration-300 max-lg:hidden flex"
             style={{ background: "var(--bg-card)", border: "1px solid var(--border)", color: "var(--text-muted)" }}
           >
             <Search className="w-4 h-4" />
@@ -132,7 +140,7 @@ export default function Navigation({ onNavigate, currentPath, isDark, toggleDark
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
             onClick={() => handleNavigate("fonts")}
-            className="hidden lg:flex items-center gap-3 px-6 py-3 rounded-2xl text-[11px] font-bold tracking-[0.2em] uppercase font-headline transition-all duration-300 group"
+            className="max-lg:hidden flex items-center gap-3 px-6 py-3 rounded-2xl text-[11px] font-bold tracking-[0.2em] uppercase font-headline transition-all duration-300 group"
             style={{ background: "var(--brand)", color: "#fff" }}
           >
             Get Fonts
@@ -142,7 +150,7 @@ export default function Navigation({ onNavigate, currentPath, isDark, toggleDark
           {/* Mobile Hamburger */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className="w-10 h-10 flex items-center justify-center rounded-2xl transition-all duration-300 md:hidden"
+            className="w-10 h-10 flex items-center justify-center rounded-2xl transition-all duration-300 min-md:hidden"
             style={{ background: "var(--bg-card)", border: "1px solid var(--border)", color: "var(--text-muted)" }}
           >
             <Menu className="w-5 h-5" />
@@ -186,19 +194,22 @@ export default function Navigation({ onNavigate, currentPath, isDark, toggleDark
 
               {/* Nav Links */}
               <div className="flex flex-col gap-8">
-                {navItems.map((item, i) => (
-                  <motion.button
-                    key={item.path}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.08 }}
-                    onClick={() => handleNavigate(item.path)}
-                    className="text-5xl font-black tracking-tighter text-left font-headline transition-all"
-                    style={{ color: currentPath === item.path ? "var(--brand)" : "var(--text-faint)" }}
-                  >
-                    {item.name}
-                  </motion.button>
-                ))}
+                {navItems.map((item: any, i: number) => {
+                  const isActive = (item.path === "" && currentPath === "home") || currentPath === item.path;
+                  return (
+                    <motion.button
+                      key={item.path}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.08 }}
+                      onClick={() => handleNavigate(item.path)}
+                      className="text-5xl font-black tracking-tighter text-left font-headline transition-all"
+                      style={{ color: isActive ? "var(--brand)" : "var(--text-faint)" }}
+                    >
+                      {item.name}
+                    </motion.button>
+                  );
+                })}
               </div>
 
               {/* Drawer Footer */}
@@ -222,4 +233,6 @@ export default function Navigation({ onNavigate, currentPath, isDark, toggleDark
       </AnimatePresence>
     </>
   );
-}
+};
+
+export default memo(Navigation);

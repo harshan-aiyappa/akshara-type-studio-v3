@@ -5,6 +5,8 @@
   --color-primary-container: #EAFDE7;
   --color-secondary: #0A382F;
   --color-tertiary: #2A8D40;
+  --color-brand: #3AB549;      /* Added for from-brand */
+  --color-brand-dark: #0A382F; /* Added for to-brand-dark */
   --color-surface: #EAFDE7;
   --color-surface-bright: #FFFFFF;
   --color-on-surface: #0A382F;
@@ -21,16 +23,16 @@
    LIGHT THEME (default)
    ======================== */
 :root {
-  --bg:           #EAFDE7;
-  --bg-card:      #f7fdf9;
-  --bg-elevated:  #ffffff;
+  --bg:           #F8FEF9; /* Softer, more premium off-white */
+  --bg-card:      #FFFFFF;
+  --bg-elevated:  #FFFFFF;
   --text-primary: #0A382F;
-  --text-muted:   rgba(10,56,47,0.5);
-  --text-faint:   rgba(10,56,47,0.25);
-  --border:       rgba(58,181,73,0.12);
+  --text-muted:   rgba(10,56,47,0.7); /* Increased opacity for WCAG compliance */
+  --text-faint:   rgba(10,56,47,0.5); /* Boosted for better readability */
+  --border:       rgba(58,181,73,0.15);
   --brand:        #3AB549;
   --brand-dark:   #0A382F;
-  --nav-bg:       rgba(234,253,231,0.85);
+  --nav-bg:       rgba(248,254,249,0.85);
   --nav-border:   rgba(58,181,73,0.15);
 }
 
@@ -38,17 +40,17 @@
    DARK THEME
    ======================== */
 .dark {
-  --bg:           #061510;
-  --bg-card:      #0C231B;
-  --bg-elevated:  #112B20;
+  --bg:           #040D0A; /* Deeper dark for better "ink" feel */
+  --bg-card:      #081A14;
+  --bg-elevated:  #0C251C;
   --text-primary: #EAFDE7;
-  --text-muted:   rgba(234,253,231,0.5);
-  --text-faint:   rgba(234,253,231,0.2);
-  --border:       rgba(58,181,73,0.15);
+  --text-muted:   rgba(234,253,231,0.7); /* Increased opacity */
+  --text-faint:   rgba(234,253,231,0.5); /* Boosted for better readability */
+  --border:       rgba(58,181,73,0.2);
   --brand:        #3AB549;
   --brand-dark:   #EAFDE7;
-  --nav-bg:       rgba(6,21,16,0.9);
-  --nav-border:   rgba(58,181,73,0.2);
+  --nav-bg:       rgba(4,13,10,0.9);
+  --nav-border:   rgba(58,181,73,0.25);
 }
 
 @layer base {
@@ -87,22 +89,19 @@
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border: 1px solid var(--nav-border);
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.05);
   }
 
-  .theme-bg       { background-color: var(--bg); }
-  .theme-bg-card  { background-color: var(--bg-card); }
-  .theme-text     { color: var(--text-primary); }
-  .theme-muted    { color: var(--text-muted); }
-  .theme-border   { border-color: var(--border); }
-
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .pill-badge {
+    @apply px-3 py-1 rounded-full text-xs font-medium tracking-wide border;
+    background: var(--bg-elevated);
+    border-color: var(--border);
+    color: var(--text-muted);
   }
-  .hide-scrollbar::-webkit-scrollbar { display: none; }
 
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .premium-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand to-brand-dark;
+  }
 }
 
 /* ========================

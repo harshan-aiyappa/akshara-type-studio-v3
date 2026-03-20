@@ -8,10 +8,14 @@ import { useState, useRef, useEffect, useCallback } from "react";
 declare global {
   interface Window {
     enableTransliteration?: (el: HTMLElement, lang: string) => void;
-    SpeechRecognition?: typeof SpeechRecognition;
-    webkitSpeechRecognition?: typeof SpeechRecognition;
+    SpeechRecognition?: any;
+    webkitSpeechRecognition?: any;
   }
 }
+
+// Local type aliases for speech recognition
+type ISpeechRecognition = any;
+type ISpeechRecognitionEvent = any;
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text).catch(() => {
@@ -85,7 +89,7 @@ function TransliterationTool() {
         <h3 className="text-3xl md:text-4xl font-bold tracking-tighter font-headline mb-3">
           English → Kannada Typing
         </h3>
-        <p className="text-white/50 text-sm font-light leading-relaxed font-body max-w-lg">
+        <p className="text-white/80 text-sm font-light leading-relaxed font-body max-w-lg">
           {loaded
             ? "Type phonetically in English — your words will automatically transliterate to Kannada Unicode."
             : "Loading transliteration engine…"}
@@ -143,11 +147,11 @@ function SpeechToTextTool() {
   const [recording, setRecording] = useState(false);
   const [status, setStatus] = useState<"idle" | "listening" | "error" | "unsupported">("idle");
   const [copied, setCopied] = useState(false);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<ISpeechRecognition | null>(null);
 
   const SpeechRecognitionAPI =
     typeof window !== "undefined"
-      ? (window.SpeechRecognition ?? window.webkitSpeechRecognition)
+      ? ((window as any).SpeechRecognition ?? (window as any).webkitSpeechRecognition)
       : undefined;
 
   const supported = !!SpeechRecognitionAPI;
@@ -172,7 +176,7 @@ function SpeechToTextTool() {
     recognition.onstart = () => { setRecording(true); setStatus("listening"); };
     recognition.onend = () => { setRecording(false); setStatus("idle"); setInterim(""); };
     recognition.onerror = () => { setRecording(false); setStatus("error"); setInterim(""); };
-    recognition.onresult = (e) => {
+    recognition.onresult = (e: ISpeechRecognitionEvent) => {
       let fin = "";
       let int = "";
       for (let i = e.resultIndex; i < e.results.length; i++) {
@@ -411,7 +415,7 @@ function OcrTool() {
       <div className="flex gap-2 flex-wrap">
         <button
           onClick={() => fileRef.current?.click()}
-          className="flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest font-headline transition-all"
+          className="flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl font-bold text- xs uppercase tracking-widest font-headline transition-all"
           style={{ background: "var(--brand-dark)", color: "#fff" }}
         >
           <Upload className="w-4 h-4" />
@@ -435,62 +439,60 @@ function OcrTool() {
 /* ─── Main Page ─── */
 export default function ToolsPage() {
   return (
-    <div className="min-h-screen" style={{ background: "var(--bg)", color: "var(--text-primary)" }}>
-      <main className="pt-24 sm:pt-32">
-        <section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 pb-40">
-          {/* Hero Header */}
-          <div className="mb-12 sm:mb-16 md:mb-20 max-w-4xl">
-            <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-4 mb-6">
-              <div className="h-[2px] w-10" style={{ background: "var(--brand)" }} />
-              <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--brand)" }}>
-                Type Lab · Free Tools
-              </span>
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="font-bold tracking-tighter font-headline leading-[0.9] mb-8"
-              style={{ fontSize: "clamp(3rem,10vw,8rem)", color: "var(--text-primary)" }}
-            >
-              Digital <span className="italic font-light" style={{ color: "var(--text-muted)", opacity: 0.5 }}>Alchemies.</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.15 }}
-              className="text-lg md:text-xl font-light leading-relaxed max-w-2xl font-body"
-              style={{ color: "var(--text-muted)" }}
-            >
-              A suite of free utilities for Kannada digital workflows — transliterate, transcribe, and extract text with ease.
-            </motion.p>
-          </div>
+    <div className="min-h-screen pt-24 sm:pt-32" style={{ background: "var(--bg)", color: "var(--text-primary)" }}>
+      <section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 pb-40">
+        {/* Hero Header */}
+        <div className="mb-12 sm:mb-16 md:mb-20 max-w-4xl">
+          <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-4 mb-6">
+            <div className="h-[2px] w-10" style={{ background: "var(--brand)" }} />
+            <span className="text-[9px] sm:text-[10px] font-black tracking-[0.5em] uppercase font-headline" style={{ color: "var(--brand)" }}>
+              Type Lab · Free Tools
+            </span>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="font-black tracking-tighter font-headline leading-[0.9] mb-8"
+            style={{ fontSize: "clamp(3rem,10vw,8rem)", color: "var(--text-primary)" }}
+          >
+            Digital <span className="italic font-light premium-gradient-text">Alchemies.</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.15 }}
+            className="text-lg md:text-xl font-light leading-relaxed max-w-2xl font-body"
+            style={{ color: "var(--text-muted)" }}
+          >
+            A suite of free utilities for Kannada digital workflows — transliterate, transcribe, and extract text with ease.
+          </motion.p>
+        </div>
 
-          {/* Tools Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <TransliterationTool />
-            <SpeechToTextTool />
-            <OcrTool />
-          </div>
+        {/* Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <TransliterationTool />
+          <SpeechToTextTool />
+          <OcrTool />
+        </div>
 
-          {/* Info strip */}
-          <div className="mt-16 rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-12"
-            style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
-            <div className="flex-1">
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-3 font-headline" style={{ color: "var(--brand)" }}>
-                Tip
-              </p>
-              <p className="text-sm font-light font-body leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                The transliteration tool uses phonetic mapping — type English sounds to get Kannada script.
-                For example, type <strong style={{ color: "var(--text-primary)" }}>"namma"</strong> to get <strong style={{ color: "var(--text-primary)" }}>ನಮ್ಮ</strong>.
-                Press <strong style={{ color: "var(--text-primary)" }}>Space</strong> to confirm each word.
-              </p>
-            </div>
-            <div className="flex-shrink-0 text-5xl font-kannada select-none" style={{ color: "var(--brand)", opacity: 0.6 }}>
-              ನಮ್ಮ
-            </div>
+        {/* Info strip */}
+        <div className="mt-16 rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-12"
+          style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
+          <div className="flex-1">
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] mb-3 font-headline" style={{ color: "var(--brand)" }}>
+              Tip
+            </p>
+            <p className="text-sm font-light font-body leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              The transliteration tool uses phonetic mapping — type English sounds to get Kannada script.
+              For example, type <strong className="theme-text">"namma"</strong> to get <strong className="theme-text">ನಮ್ಮ</strong>.
+              Press <strong className="theme-text">Space</strong> to confirm each word.
+            </p>
           </div>
-        </section>
-      </main>
+          <div className="flex-shrink-0 text-5xl font-kannada select-none" style={{ color: "var(--brand)", opacity: 0.6 }}>
+            ನಮ್ಮ
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

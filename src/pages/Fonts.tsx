@@ -13,7 +13,12 @@ const categories: { icon: React.ElementType; label: FontCategory | "All" }[] = [
   { icon: Zap,      label: "Variable"    },
 ];
 
-export default function FontsPage({ onSelectFont }: { onSelectFont: (slug: string) => void }) {
+interface FontsPageProps {
+  onSelectFont: (slug: string) => void;
+  onNavigate: (path: string) => void;
+}
+
+export default function FontsPage({ onSelectFont, onNavigate }: FontsPageProps) {
   const [activeCategory, setActiveCategory] = useState<FontCategory | "All">("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"name" | "year" | "styles">("name");
@@ -106,14 +111,13 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: (slug: strin
           ))}
         </nav>
         <div className="px-8 pb-10 pt-6" style={{ borderTop: "1px solid var(--border)" }}>
-          <a
-            href="#contact"
-            onClick={e => { e.preventDefault(); window.location.hash = "contact"; window.scrollTo({ top: 0, behavior: "instant" }); }}
+          <button
+            onClick={() => onNavigate("contact")}
             className="w-full py-5 rounded-2xl text-xs font-bold uppercase tracking-widest font-headline transition-all text-white flex items-center justify-center"
             style={{ background: "var(--brand-dark)" }}
           >
             Commission Custom Type
-          </a>
+          </button>
         </div>
       </aside>
 
@@ -132,7 +136,7 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: (slug: strin
             style={{ fontSize: "clamp(2.8rem,10vw,9rem)", color: "var(--text-primary)" }}
           >
             Preserving the soul <br />
-            <span className="italic font-light" style={{ color: "var(--text-muted)", opacity: 0.6 }}>of Kannada</span> <br />
+            <span className="italic font-light premium-gradient-text">of Kannada</span> <br />
             Typography.
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
@@ -198,7 +202,7 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: (slug: strin
                 <div className="flex flex-col items-end gap-2">
                   {font.tag && (
                     <span
-                      className="px-3 py-1.5 rounded-full text-[8px] sm:text-[9px] font-black tracking-widest uppercase font-headline"
+                      className="pill-badge"
                       style={{
                         background: font.isReal ? "var(--brand)" : "var(--brand-dark)",
                         color: "#fff",
@@ -287,9 +291,9 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: (slug: strin
             </div>
             <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.5em] mb-6 font-headline" style={{ color: "#3AB549" }}>Free to Download</span>
             <h2 className="font-black tracking-tighter leading-[0.85] mb-8 font-headline" style={{ fontSize: "clamp(2rem,7vw,6rem)" }}>
-              Kannada Typography <br /><span className="italic font-light opacity-40">for everyone.</span>
+              Kannada Typography <br /><span className="italic font-light opacity-60">for everyone.</span>
             </h2>
-            <p className="text-white/40 max-w-xl mb-10 font-light leading-relaxed font-body text-sm sm:text-base">
+            <p className="text-white/80 max-w-xl mb-10 font-light leading-relaxed font-body text-sm sm:text-base">
               All ATS fonts are freely available for personal and commercial use. Download the full family ZIP and start creating.
             </p>
             <div className="flex items-center gap-5 cursor-pointer group/btn" onClick={() => onSelectFont("bandipura")}>
@@ -317,7 +321,7 @@ export default function FontsPage({ onSelectFont }: { onSelectFont: (slug: strin
             <button
               className="mt-10 sm:mt-16 py-5 font-bold rounded-2xl hover:opacity-90 transition-all text-xs uppercase tracking-widest font-headline"
               style={{ border: "2px solid var(--text-primary)", color: "var(--text-primary)" }}
-              onClick={() => { window.location.hash = "tools"; window.scrollTo({ top: 0, behavior: "instant" }); }}
+              onClick={() => onNavigate("tools")}
             >
               Open Type Lab
             </button>

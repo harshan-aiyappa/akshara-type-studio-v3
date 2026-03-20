@@ -61,14 +61,14 @@ export default function HeroSection({ onNavigate }: HeroProps) {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-black tracking-[-0.04em] leading-[0.85] mb-10 sm:mb-14 md:mb-16 font-headline"
+            className="font-black tracking-[-0.04em] leading-[0.85] mb-10 sm:mb-14 md:mb-16 font-headline will-change-transform"
             style={{
               fontSize: "clamp(3.2rem, 14vw, 13rem)",
               color: "var(--text-primary)",
             }}
           >
             Designing <br />
-            <span className="italic font-light mix-blend-multiply" style={{ color: "var(--brand)", opacity: 0.7 }}>Kannada</span> <br />
+            <span className="italic font-light premium-gradient-text">Kannada</span> <br />
             Form.
           </motion.h1>
 
@@ -132,10 +132,10 @@ export default function HeroSection({ onNavigate }: HeroProps) {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-20"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-20 pointer-events-none"
       >
         <div className="w-[1px] h-10 sm:h-14" style={{ background: `linear-gradient(to bottom, var(--brand), transparent)` }} />
-        <span className="text-[9px] font-bold tracking-[0.4em] uppercase font-headline" style={{ color: "var(--text-faint)" }}>Scroll</span>
+        <span className="text-[9px] font-black tracking-[0.4em] uppercase font-headline" style={{ color: "var(--text-muted)" }}>Scroll</span>
       </motion.div>
     </section>
   );

@@ -52,7 +52,7 @@ export default function AboutPage() {
               style={{ fontSize: "clamp(3rem,13vw,11rem)", color: "var(--text-primary)" }}
             >
               The Genesis <br />
-              <span className="italic font-light" style={{ color: "var(--brand)", opacity: 0.5 }}>of Modern</span> <br />
+              <span className="italic font-light premium-gradient-text">of Modern</span> <br />
               Heritage.
             </motion.h1>
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
                   Stone Carved <br />Logic.
                 </h2>
               </div>
-              <p className="text-white/40 text-base sm:text-xl max-w-md font-light leading-relaxed font-body mt-8 sm:mt-12">
+              <p className="text-white/70 text-base sm:text-xl max-w-md font-light leading-relaxed font-body mt-8 sm:mt-12">
                 Founded by Manjunatha R., we began by cataloging vanishing stone-cut scripts across Karnataka, translating their physical gravity into digital weight.
               </p>
             </motion.div>
@@ -219,11 +219,11 @@ export default function AboutPage() {
               >
                 <span
                   className="font-black block leading-none mb-3 sm:mb-4 font-headline"
-                  style={{ fontSize: "clamp(3rem,10vw,7rem)", color: "rgba(234,253,231,0.08)" }}
+                  style={{ fontSize: "clamp(3rem,10vw,7rem)", color: "rgba(234,253,231,0.15)" }}
                 >
                   {stat.val}
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.4em] font-headline" style={{ color: "rgba(234,253,231,0.3)" }}>
+                <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.4em] font-headline" style={{ color: "rgba(234,253,231,0.6)" }}>
                   {stat.label}
                 </span>
               </motion.div>

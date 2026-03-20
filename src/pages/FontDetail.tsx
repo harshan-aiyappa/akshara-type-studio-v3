@@ -101,14 +101,14 @@ export default function FontDetailPage({ fontSlug, onBack }: Props) {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-extrabold tracking-tighter leading-[0.9] font-headline mb-8 break-words"
-            style={{ fontSize: "clamp(2.5rem,8vw,8rem)", color: "var(--text-primary)", maxWidth: "100%" }}
+            className="font-black tracking-tighter leading-[0.9] font-headline mb-8 break-words premium-gradient-text"
+            style={{ fontSize: "clamp(2.5rem,8vw,8rem)", maxWidth: "100%" }}
           >
             {font.name}
           </motion.h1>
 
           <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span className="px-4 py-2 rounded-full text-[10px] font-black tracking-widest uppercase font-headline"
+            <span className="pill-badge"
               style={{ background: "var(--brand)", color: "#fff" }}>
               {font.tag ?? font.status}
             </span>
@@ -388,10 +388,10 @@ export default function FontDetailPage({ fontSlug, onBack }: Props) {
                 Free Download
               </span>
               <h3 className="text-3xl font-bold mb-4 tracking-tighter font-headline">Ready to use.</h3>
-              <p className="text-white/50 text-sm font-light leading-relaxed mb-8 font-body">
+              <p className="text-white/80 text-sm font-light leading-relaxed mb-8 font-body">
                 {font.name} is free for personal and commercial use. Download the complete font package.
               </p>
-              <p className="text-white/30 text-xs font-bold uppercase tracking-widest font-headline">
+              <p className="text-white/60 text-xs font-bold uppercase tracking-widest font-headline">
                 {font.nameKannada}
               </p>
             </div>
